@@ -1,49 +1,83 @@
-# Getting Started with Create React App
+# Figma设计稿还原 - 挑战任务和排行榜
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+这是一个基于React的项目，还原了Figma设计稿中的挑战任务和排行榜界面。
 
-## Available Scripts
+## 🎯 项目特性
 
-In the project directory, you can run:
+- **挑战任务卡片**：包含热度值、PK次数、观众数、直播时长等任务
+- **进度条显示**：动态显示任务完成进度
+- **排行榜组件**：展示用户信息和各项数据
+- **自定义图标**：SVG图标与设计稿保持一致
+- **响应式设计**：适配移动端和桌面端
 
-### `npm start`
+## 🚀 快速开始
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 安装依赖
+```bash
+npm install
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 启动开发服务器
+```bash
+npm start
+```
+在浏览器中打开 [http://localhost:3000](http://localhost:3000) 查看应用。
 
-### `npm test`
+### 构建生产版本
+```bash
+npm run build
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📁 项目结构
 
-### `npm run build`
+```
+src/
+├── components/
+│   ├── TaskCard.js          # 任务卡片组件
+│   ├── TaskCard.css         # 任务卡片样式
+│   ├── RankItem.js          # 排行榜条目组件
+│   ├── RankItem.css         # 排行榜条目样式
+│   └── TaskIcons.js         # 任务图标组件
+├── App.js                   # 主应用组件
+├── App.css                  # 主应用样式
+└── index.js                 # 应用入口
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🎨 设计实现
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **颜色方案**：遵循Figma设计稿的色彩规范
+- **字体**：使用PingFang SC和Alte DIN 1451 Mittelschrift
+- **布局**：Flexbox布局，支持响应式设计
+- **图标**：自定义SVG图标，包含渐变效果
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📱 组件说明
 
-### `npm run eject`
+### TaskCard 组件
+- 支持普通和大尺寸两种模式
+- 包含任务标题、进度数值、进度条和图标
+- 动态计算进度百分比
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### RankItem 组件
+- 用户头像、昵称和火力值
+- 基础分、公演分、排名等数据展示
+- 支持直播状态标识和关注按钮
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### TaskIcons 组件
+- HeatIcon：热度值图标（柱状图样式）
+- PKIcon：PK图标（对战样式）
+- AudienceIcon：观众数图标（人群样式）
+- DurationIcon：时长图标（时钟样式）
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🔧 技术栈
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- React 18
+- CSS3 (Flexbox, Grid)
+- SVG (自定义图标)
+- Create React App
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+基于 [Create React App](https://github.com/facebook/create-react-app) 创建
 
 ### Code Splitting
 

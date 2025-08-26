@@ -1,38 +1,100 @@
+/* 导入字体 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+  background-color: #FFFFFF;
+  color: #001A4F;
+  line-height: 1.5;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  max-width: 414px;
+  margin: 0 auto;
+  background: #FFFFFF;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  gap: 67px;
+  padding: 10px;
+}
+
+.challenge-section {
+  display: flex;
+  flex-direction: column;
+  gap: 67px;
+}
+
+.task-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 358px;
+  margin: 0 auto;
+}
+
+.task-group-large {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 358px;
+  margin: 0 auto;
+}
+
+.rank-list {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+/* 字体回退 */
+.task-card__current,
+.task-card__target,
+.fire-value,
+.stat-value {
+  font-family: 'Alte DIN 1451 Mittelschrift', 'Inter', 'Arial', monospace;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* 响应式设计 */
+@media (max-width: 428px) {
+  .App {
+    max-width: 100%;
+    padding: 10px 5px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .task-group,
+  .task-group-large {
+    width: 100%;
+    max-width: 358px;
+  }
+  
+  .task-card {
+    width: calc(50% - 5px);
+    min-width: 160px;
+  }
+  
+  .task-card--large {
+    width: 100%;
+    max-width: 358px;
+  }
+  
+  .rank-item {
+    width: 100%;
+    max-width: 414px;
+  }
+}
+
+@media (min-width: 429px) {
+  .App {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px auto;
   }
 }
