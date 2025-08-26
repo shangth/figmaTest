@@ -1,0 +1,83 @@
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #FFFFFF;
+  border-top: 1px solid #E5E5E5;
+}
+
+.bottom-nav-content {
+  display: flex;
+  height: 49px;
+  background: #FFFFFF;
+}
+
+.bottom-nav-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #D8D8D8;
+  position: relative;
+}
+
+.bottom-nav-item.active {
+  background: #FFFFFF;
+}
+
+.bottom-nav-item.special {
+  background: transparent;
+}
+
+.nav-label {
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #999999;
+}
+
+.bottom-nav-item.active .nav-label {
+  color: #222222;
+}
+
+.add-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 82px;
+  height: 49px;
+  background: transparent;
+}
+
+.add-button-circle {
+  width: 36px;
+  height: 36px;
+  border: 2px solid #222222;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-icon {
+  font-size: 18px;
+  color: #222222;
+  font-weight: normal;
+}
+
+.home-indicator {
+  height: 37px;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 23px;
+}
+
+.indicator-bar {
+  width: 134px;
+  height: 5px;
+  background: #000000;
+  border-radius: 100px;
+}

@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# Figma 设计稿还原 - 电商App首页
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+这是一个基于 React 开发的电商App首页，完全按照提供的 Figma 设计稿进行还原。
 
-## Available Scripts
+## 项目特点
 
-In the project directory, you can run:
+### 🎨 高度还原设计稿
+- 完全按照 Figma 设计稿的布局、颜色、字体进行还原
+- 使用了精确的尺寸和间距
+- 保持了原设计的视觉效果
 
-### `npm start`
+### 📱 响应式设计
+- 适配不同屏幕尺寸
+- 针对 iOS 设计规范优化
+- 流畅的交互体验
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### ⚡ 交互功能
+- 顶部导航栏 tab 切换
+- 底部导航栏状态切换
+- 商品卡片点击交互
+- 商品收藏功能
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 项目结构
 
-### `npm test`
+```
+src/
+├── components/
+│   ├── StatusBar/          # 状态栏组件
+│   ├── Navigation/         # 顶部导航栏
+│   ├── SearchBar/          # 搜索栏
+│   ├── FunctionNav/        # 功能导航区域
+│   ├── BrandSection/       # 品牌展示区域
+│   ├── ProductCard/        # 商品卡片组件
+│   └── BottomNav/          # 底部导航栏
+├── assets/
+│   └── images/            # 从 Figma 下载的商品图片
+├── App.js                 # 主应用组件
+└── App.css               # 全局样式
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 主要组件说明
 
-### `npm run build`
+### StatusBar
+模拟 iOS 状态栏，包含时间、定位、信号、WiFi、电池等信息
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Navigation  
+顶部导航栏，包含菜单、tab切换（商城、关注、发现、同城、直播）、搜索图标
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### SearchBar
+搜索输入框，包含搜索图标、占位文本和搜索按钮
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### FunctionNav
+功能导航区域，包含我的订单、黑钻买家、砍价购、购物车、直播爆款等快捷入口
 
-### `npm run eject`
+### BrandSection
+品牌展示区域，展示大牌大补活动商品
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### ProductCard
+商品卡片组件，包含商品图片、标签、标题、优惠信息、价格、销量等信息
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### BottomNav
+底部导航栏，包含首页、精选、发布按钮、消息、个人中心
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 运行项目
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+# 安装依赖
+npm install
 
-## Learn More
+# 启动开发服务器
+npm start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# 构建生产版本
+npm run build
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 技术栈
 
-### Code Splitting
+- React 19.1.1
+- CSS3 (Flexbox, Grid)
+- JavaScript ES6+
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 设计还原亮点
 
-### Analyzing the Bundle Size
+1. **像素级还原**: 严格按照 Figma 设计稿的尺寸、颜色、字体进行开发
+2. **组件化设计**: 将界面拆分为可复用的组件，便于维护和扩展
+3. **状态管理**: 使用 React Hooks 管理组件状态
+4. **交互反馈**: 添加hover效果、点击反馈等用户体验优化
+5. **响应式适配**: 针对不同屏幕尺寸进行适配
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 浏览器兼容性
 
-### Making a Progressive Web App
+- Chrome 88+
+- Safari 14+
+- Firefox 85+
+- Edge 88+
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+项目完全还原了 Figma 设计稿中的电商App首页，具备完整的视觉效果和基础交互功能。
