@@ -1,0 +1,185 @@
+/* 推送通知主容器 */
+.push-notification {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  width: fit-content;
+  height: fit-content;
+  
+  /* 背景渐变 */
+  background: linear-gradient(270deg, rgba(255, 255, 255, 1) 0%, rgba(235, 250, 255, 1) 100%);
+  
+  /* 边框 */
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  
+  /* 阴影和模糊效果 */
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(32px);
+  
+  /* 字体设置 */
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* 图标容器 */
+.icon-container {
+  width: 62px;
+  height: 62px;
+  background: #07D169;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+  /* 内阴影效果 */
+  box-shadow: inset 2.3px -1.15px 1.95px 0px rgba(255, 255, 255, 0.11);
+}
+
+.icon-frame {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-icon {
+  width: 37px;
+  height: 35.46px;
+  filter: brightness(0) invert(1); /* 将图标变为白色 */
+}
+
+/* 文本内容区域 */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.main-text {
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #222222;
+  text-align: left;
+  margin: 0;
+}
+
+.sub-text {
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #717171;
+  text-align: left;
+  width: 230px;
+  margin: 0;
+}
+
+/* 右侧控制区域 */
+.controls-container {
+  width: 42px;
+  height: 24px;
+  position: relative;
+}
+
+.badge-container {
+  position: relative;
+  width: 42px;
+  height: 24px;
+}
+
+/* 数字徽章 */
+.badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: #FF2F2F;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge-number {
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 600;
+  font-size: 14.4px;
+  line-height: 1;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+/* 返回按钮 */
+.back-button {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-icon-container {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -8px;
+  margin-top: -8px;
+}
+
+.back-icon-container::before {
+  content: '';
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 70, 70, 0.1);
+  border-radius: 4px;
+}
+
+.back-icon {
+  width: 6.13px;
+  height: 12.27px;
+  z-index: 1;
+  filter: brightness(0) saturate(100%) invert(45%) sepia(4%) saturate(407%) hue-rotate(202deg) brightness(94%) contrast(86%);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .push-notification {
+    padding: 12px;
+    gap: 8px;
+  }
+  
+  .icon-container {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .icon-frame {
+    width: 38px;
+    height: 38px;
+  }
+  
+  .main-icon {
+    width: 28px;
+    height: 27px;
+  }
+  
+  .sub-text {
+    width: 180px;
+  }
+}
