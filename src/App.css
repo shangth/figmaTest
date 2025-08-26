@@ -1,38 +1,549 @@
-.App {
-  text-align: center;
+/* 全局样式重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* 主要活动卡片 */
+.activity-card {
+  width: 382px;
+  position: relative;
+  background: linear-gradient(
+    246deg, 
+    rgba(255, 155, 233, 1) 4%, 
+    rgba(255, 88, 103, 0) 29%
+  ),
+  linear-gradient(
+    177deg, 
+    rgba(255, 156, 75, 1) 0%, 
+    rgba(255, 156, 75, 0) 15%
+  ),
+  linear-gradient(
+    180deg, 
+    rgba(255, 79, 82, 0) 0%, 
+    rgba(255, 79, 82, 0.8) 9%, 
+    rgba(255, 79, 82, 1) 16%
+  );
+  border-radius: 16px;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 
+              0 2px 8px rgba(255, 79, 82, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideInUp 0.8s ease-out;
+}
+
+.activity-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  background: linear-gradient(
+    139deg, 
+    rgba(255, 240, 164, 1) 0%, 
+    rgba(255, 255, 255, 0) 6%
+  ),
+  linear-gradient(
+    251deg, 
+    rgba(255, 155, 253, 1) 0%, 
+    rgba(255, 255, 255, 0) 8%
+  );
+  border-radius: inherit;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.activity-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), 
+              0 4px 12px rgba(255, 79, 82, 0.4);
+}
+
+/* 加成动画区域 */
+.animation-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  background: linear-gradient(180deg, rgba(255, 234, 228, 1) 75%, rgba(255, 234, 228, 0) 100%);
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+}
+
+.gradient-bars {
+  position: absolute;
+  top: -3.5px;
+  left: -28px;
+  width: 357px;
+  height: 79px;
+  display: flex;
+}
+
+.gradient-bars .bar {
+  width: 50px;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(255, 215, 178, 0) 0%, rgba(255, 199, 198, 1) 100%);
+  opacity: 0.16;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.gradient-bars .bar:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.gradient-bars .bar:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.gradient-bars .bar:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.gradient-bars .bar:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.gradient-bars .bar:nth-child(6) {
+  animation-delay: 1s;
+}
+
+.gradient-bars .bar:nth-child(7) {
+  animation-delay: 1.2s;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    opacity: 0.16;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scaleY(1.1);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* 主要内容区 */
+.main-content {
+  padding: 16px;
+  padding-top: 72px;
   display: flex;
   flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+/* 状态信息区 */
+.status-section {
+  width: 100%;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+}
+
+.avatar-wrapper {
+  position: relative;
+  width: 36px;
+  height: 36px;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 0.5px solid #FFD7B2;
+}
+
+.live-badge {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(180deg, rgba(255, 123, 186, 1) 0%, rgba(255, 50, 62, 1) 100%);
+  border: 0.75px solid rgba(255, 191, 133, 1);
+  border-radius: 50%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  animation: livePulse 2s ease-in-out infinite;
+}
+
+@keyframes livePulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 123, 186, 0.4);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 3px rgba(255, 123, 186, 0.2);
+  }
+}
+
+.live-dot {
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+}
+
+.ranking-data {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.rank-info {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 4px;
+}
+
+.rank-text {
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #FFF8EC;
+}
+
+.rank-number {
+  font-family: 'Alte DIN 1451 Mittelschrift', monospace;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #FFF8EC;
+}
+
+.rank-detail {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.detail-text {
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #FFF8EC;
+}
+
+.detail-number {
+  font-family: 'Alte DIN 1451 Mittelschrift', monospace;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #FFF8EC;
+}
+
+.bonus-data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex: 1;
+}
+
+.bonus-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.bonus-sign,
+.bonus-percent {
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #FFDB4D;
+}
+
+.bonus-status {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.bonus-text {
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.71;
+  color: #FFF8EC;
+}
+
+.arrow-icon {
+  width: 10px;
+  height: 10px;
+  color: #FFF8EC;
+}
+
+.bonus-detail {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* 支线玩法区 */
+.gameplay-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.section-header {
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title {
+  font-family: 'HYYakuHei', sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1.25;
+  background: linear-gradient(25deg, rgba(255, 239, 184, 1) 63%, rgba(254, 208, 165, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+}
+
+.timer-badge {
+  background: #FFEEB8;
+  color: #FF4F52;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  animation: timerBlink 1s ease-in-out infinite;
+}
+
+@keyframes timerBlink {
+  0%, 100% {
+    background: #FFEEB8;
+  }
+  50% {
+    background: #FFE187;
+  }
+}
+
+.subtitle-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2px;
+}
+
+.subtitle {
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #FFF8EC;
+}
+
+/* VS 对决卡片 */
+.vs-card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 0 12px 16px;
+  margin: 0 12px;
+  position: relative;
+}
+
+.player-info {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.player-info.opponent {
+  justify-content: flex-end;
+  margin-bottom: 0;
+}
+
+.player-avatar {
+  position: relative;
+  width: 36px;
+  height: 36px;
+}
+
+.player-names {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 4px;
+}
+
+.my-name {
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  color: #FFF8EC;
+}
+
+.opponent-name {
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  color: #FFF8EC;
+  text-align: right;
+}
+
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.progress-track {
+  width: 100%;
+  height: 14px;
+  background: #000;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 4px;
+  display: flex;
+}
+
+.progress-left {
+  height: 100%;
+  background: #F290F4;
+  border-radius: 8px 0 0 8px;
+  transition: width 0.3s ease;
+  flex: 1;
+}
+
+.progress-track::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: #1E93FF;
+  border-radius: 0 8px 8px 0;
+}
+
+.progress-values {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.value-left,
+.value-right {
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* 胜利横幅 */
+.victory-banner {
+  position: absolute;
+  top: 0;
+  left: 86px;
+  width: 186px;
+  height: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.banner-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 168, 139, 1) 0%, rgba(254, 37, 66, 1) 49%);
+  border: 0.5px solid rgba(255, 117, 149, 1);
+  border-radius: 0 0 8px 8px;
+}
+
+.banner-text {
+  position: absolute;
+  top: 3px;
+  left: 7px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.4;
+  color: #FFF8EC;
+}
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+  .App {
+    padding: 10px;
+  }
+  
+  .activity-card {
+    width: 100%;
+    max-width: 382px;
+  }
+  
+  .user-info {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  
+  .ranking-data,
+  .bonus-data {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .bonus-data {
+    align-items: center;
+  }
+  
+  .vs-card {
+    padding: 0 8px 12px;
+    margin: 0 8px;
   }
 }
