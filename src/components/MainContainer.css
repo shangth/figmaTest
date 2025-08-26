@@ -1,0 +1,47 @@
+.main-container {
+  width: 398px;
+  height: 78px;
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  position: relative;
+  margin: 20px auto;
+}
+
+.icon-grid {
+  display: flex;
+  align-items: flex-start;
+  height: 70px;
+  padding: 2px 0 0 0;
+  position: relative;
+}
+
+.icon-grid .icon-card:nth-child(1) {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.icon-grid .icon-card:nth-child(2) {
+  position: absolute;
+  left: 159.2px;
+  top: 0px;
+}
+
+.icon-grid .icon-card:nth-child(3) {
+  position: absolute;
+  left: 238.8px;
+  top: 0px;
+}
+
+.icon-grid .icon-card:nth-child(4) {
+  position: absolute;
+  left: 79.6px;
+  top: 0px;
+}
+
+.icon-grid .icon-card:nth-child(5) {
+  position: absolute;
+  left: 318.4px;
+  top: 0px;
+}

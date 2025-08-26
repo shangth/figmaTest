@@ -1,0 +1,23 @@
+.progress-bar-container {
+  width: 398px;
+  height: 8px;
+  background-color: #FFC3C3;
+  position: relative;
+}
+
+.progress-bar-track {
+  position: absolute;
+  left: 185px;
+  top: 0;
+  width: 24px;
+  height: 2px;
+  background-color: #E5E5E5;
+  border-radius: 2px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #888888;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
