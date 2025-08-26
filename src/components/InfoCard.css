@@ -1,0 +1,58 @@
+.info-card {
+  width: 358px;
+  height: 32px;
+  background: rgba(204, 165, 255, 0.1);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  margin: 10px auto;
+}
+
+.info-content {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.info-text-start {
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #3f2264;
+  opacity: 0.6;
+}
+
+.info-text-highlight {
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #ff5477;
+}
+
+.info-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.button-text {
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #3f2264;
+  opacity: 0.6;
+}
+
+.arrow-down {
+  width: 10px;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

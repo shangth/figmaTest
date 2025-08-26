@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { CardHead, InfoCard, TaskCard } from './components';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="app-container">
+        <CardHead />
+        <div className="content-section">
+          <InfoCard />
+          <TaskCard 
+            title="超粉初阶任务"
+            description="榜单双倍积分+5382"
+            progress="5382/5000"
+            buttonText="已完成"
+            isCompleted={true}
+            progressPercentage={100}
+          />
+          <TaskCard 
+            title="超粉初阶任务"
+            description="榜单双倍积分+5382"
+            progress="5382/10000"
+            buttonText="去开通"
+            isCompleted={false}
+            progressPercentage={54}
+          />
+        </div>
+      </div>
     </div>
   );
 }
