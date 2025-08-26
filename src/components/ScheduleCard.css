@@ -1,0 +1,292 @@
+/* 主卡片容器 */
+.schedule-card {
+  width: 382px;
+  background-color: #15152A;
+  border-radius: 16px;
+  padding: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 头部区域 */
+.card-header {
+  width: 100%;
+  height: 162px;
+  position: relative;
+  padding-top: 20px;
+  margin: 0;
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+}
+
+/* 背景容器 */
+.header-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px 16px 0 0;
+  background: #15152A;
+  overflow: hidden;
+}
+
+/* 渐变叠加层 */
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(117deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 196, 163, 0.1) 96%);
+  border-radius: 16px 16px 0 0;
+}
+
+/* 装饰性元素容器 */
+.decorative-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 模糊圆形装饰 */
+.blur-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.3;
+}
+
+.blur-circle-1 {
+  width: 304px;
+  height: 152px;
+  background: rgba(196, 68, 168, 0.2);
+  top: -76px;
+  right: -74px;
+}
+
+.blur-circle-2 {
+  width: 200px;
+  height: 100px;
+  background: rgba(68, 81, 196, 0.2);
+  top: -40px;
+  left: -60px;
+}
+
+.blur-circle-3 {
+  width: 252px;
+  height: 67px;
+  background: #8C44C4;
+  top: -32px;
+  left: 130px;
+  opacity: 0.1;
+}
+
+.blur-circle-4 {
+  width: 323px;
+  height: 67px;
+  background: #4563FF;
+  top: -46px;
+  left: -78px;
+  opacity: 0.2;
+}
+
+.blur-circle-5 {
+  width: 206px;
+  height: 60px;
+  background: #53ACFF;
+  top: -46px;
+  left: 39px;
+  opacity: 0.2;
+}
+
+.blur-circle-6 {
+  width: 270px;
+  height: 67px;
+  background: #FF6B00;
+  top: -47px;
+  left: 33px;
+  opacity: 0.06;
+}
+
+.blur-circle-7 {
+  width: 342px;
+  height: 60px;
+  background: #FFC738;
+  top: -32px;
+  left: 115px;
+  opacity: 0.3;
+}
+
+.blur-circle-8 {
+  width: 197px;
+  height: 50px;
+  background: #FF3850;
+  top: -51px;
+  left: 94px;
+  opacity: 0.3;
+}
+
+.blur-circle-9 {
+  width: 121px;
+  height: 23px;
+  background: #FFC738;
+  top: -6px;
+  right: 83px;
+  opacity: 0.3;
+}
+
+.blur-circle-10 {
+  width: 419px;
+  height: 35px;
+  background: #FFFFFF;
+  top: -16px;
+  left: -22px;
+  filter: blur(10px);
+}
+
+.blur-circle-11 {
+  width: 38px;
+  height: 9px;
+  background: #FFF59D;
+  top: 19px;
+  right: 27px;
+  filter: blur(10px);
+  opacity: 0.2;
+}
+
+/* 标题样式 */
+.card-title {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-top: 20px;
+}
+
+.card-title h2 {
+  font-family: 'HYYakuHei', 'PingFang SC', sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1.4em;
+  text-align: center;
+  background: linear-gradient(117deg, #FFFFFF 0%, #FFC4A3 96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+}
+
+/* 内容区域 */
+.card-content {
+  width: 358px;
+  border-radius: 8px;
+  padding: 0 16px;
+}
+
+.schedule-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 赛程项目 */
+.schedule-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 72px;
+}
+
+.item-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(217, 217, 217, 0);
+}
+
+.item-icon img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  max-width: 60px;
+  max-height: 60px;
+}
+
+.item-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.item-name {
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17em;
+  text-align: center;
+  color: #FFDFBF;
+}
+
+.item-date {
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.5em;
+  text-align: center;
+  color: #FFDFBF;
+  opacity: 0.6;
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+  .schedule-card {
+    width: calc(100vw - 40px);
+    max-width: 382px;
+    margin: 0 auto;
+  }
+  
+  .card-content {
+    width: calc(100% - 32px);
+  }
+  
+  .schedule-list {
+    gap: 8px;
+  }
+  
+  .schedule-item {
+    width: calc(25% - 6px);
+    min-width: 60px;
+  }
+  
+  .item-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .item-name {
+    font-size: 11px;
+  }
+  
+  .item-date {
+    font-size: 9px;
+  }
+}
