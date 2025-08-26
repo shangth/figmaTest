@@ -1,23 +1,45 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import EditRuleDialog from './components/EditRuleDialog';
 import './App.css';
 
 function App() {
+  const [dialogVisible, setDialogVisible] = useState(true);
+
+  const handleSave = (values) => {
+    console.log('保存的数据:', values);
+    setDialogVisible(false);
+  };
+
+  const handleCancel = () => {
+    setDialogVisible(false);
+  };
+
+  const showDialog = () => {
+    setDialogVisible(true);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div style={{ padding: '50px', textAlign: 'center' }}>
+        <h1>编辑规则对话框演示</h1>
+        <button onClick={showDialog} style={{ 
+          padding: '10px 20px', 
+          fontSize: '16px',
+          backgroundColor: '#165DFF',
+          color: 'white',
+          border: 'none',
+          borderRadius: '4px',
+          cursor: 'pointer'
+        }}>
+          打开编辑规则对话框
+        </button>
+      </div>
+      
+      <EditRuleDialog
+        visible={dialogVisible}
+        onCancel={handleCancel}
+        onSave={handleSave}
+      />
     </div>
   );
 }

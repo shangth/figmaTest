@@ -1,0 +1,255 @@
+/* 重置Modal默认样式 */
+.edit-rule-dialog .arco-modal {
+  padding: 0;
+}
+
+.edit-rule-dialog .arco-modal-content {
+  padding: 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.edit-rule-dialog .arco-modal-body {
+  padding: 0;
+}
+
+/* 对话框容器 */
+.dialog-container {
+  width: 480px;
+  height: 420px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* 头部样式 */
+.dialog-header {
+  flex-basis: 48px;
+  width: 480px;
+  height: 48px;
+  border-bottom: 1px solid #E5E6EB;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 19px;
+  box-sizing: border-box;
+}
+
+.dialog-title {
+  font-family: 'PingFang SC', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #1D2129;
+  text-align: center;
+  min-width: 64px;
+}
+
+.close-icon {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  color: #86909C;
+}
+
+.close-icon:hover {
+  color: #4E5969;
+}
+
+/* 内容区域 */
+.dialog-content {
+  flex-basis: 308px;
+  width: 480px;
+  height: 308px;
+  padding: 24px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 表单样式 */
+.dialog-content .arco-form {
+  width: 440px;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 表单项样式 */
+.dialog-content .arco-form-item {
+  margin-bottom: 0;
+}
+
+.dialog-content .arco-form-item:first-child {
+  flex-basis: 82px;
+  height: 82px;
+  margin-bottom: 0;
+}
+
+.dialog-content .arco-form-item:last-child {
+  flex-basis: 178px;
+  height: 178px;
+}
+
+/* 标签样式 */
+.form-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 30px;
+  padding-bottom: 8px;
+  font-family: 'PingFang SC', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #4E5969;
+}
+
+.required-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #F53F3F;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.help-icon {
+  width: 14px;
+  height: 14px;
+  color: #86909C;
+  margin-left: auto;
+}
+
+/* 输入框样式 */
+.form-input {
+  height: 32px;
+  border-radius: 2px;
+  background: #F2F3F5;
+  border: none;
+  padding: 5px 12px;
+  font-family: 'PingFang SC', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #86909C;
+}
+
+.form-input::placeholder {
+  color: #86909C;
+}
+
+.form-input:focus {
+  background: #FFFFFF;
+  border: 1px solid #165DFF;
+  box-shadow: 0 0 0 2px rgba(22, 93, 255, 0.1);
+}
+
+/* 文本域样式 */
+.form-textarea {
+  height: 128px;
+  border-radius: 2px;
+  background: #F2F3F5;
+  border: none;
+  padding: 4px 12px;
+  font-family: 'PingFang SC', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #86909C;
+  resize: none;
+}
+
+.form-textarea::placeholder {
+  color: #86909C;
+}
+
+.form-textarea:focus {
+  background: #FFFFFF;
+  border: 1px solid #165DFF;
+  box-shadow: 0 0 0 2px rgba(22, 93, 255, 0.1);
+}
+
+/* 底部样式 */
+.dialog-footer {
+  flex-basis: 64px;
+  width: 480px;
+  height: 64px;
+  border-top: 1px solid #E5E6EB;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px 19px;
+  box-sizing: border-box;
+  gap: 10px;
+}
+
+.button-group {
+  width: 440px;
+  height: 32px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 按钮样式 */
+.cancel-button {
+  width: 60px;
+  height: 32px;
+  border-radius: 2px;
+  background: #F2F3F5;
+  border: none;
+  font-family: 'PingFang SC', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #4E5969;
+  padding: 5px 16px;
+}
+
+.cancel-button:hover {
+  background: #E5E6EB;
+}
+
+.save-button {
+  width: 60px;
+  height: 32px;
+  border-radius: 2px;
+  background: #165DFF;
+  border: none;
+  font-family: 'PingFang SC', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #FFFFFF;
+  padding: 5px 16px;
+}
+
+.save-button:hover {
+  background: #4080FF;
+}
+
+/* 重置Arco Design默认样式 */
+.dialog-content .arco-form-item-label {
+  padding: 0;
+  margin: 0;
+}
+
+.dialog-content .arco-form-item-wrapper {
+  margin: 0;
+}
+
+.dialog-content .arco-form-item-wrapper-col {
+  margin: 0;
+}
+
+.dialog-content .arco-input-wrapper {
+  border: none;
+  background: transparent;
+}
+
+.dialog-content .arco-textarea-wrapper {
+  border: none;
+  background: transparent;
+}
