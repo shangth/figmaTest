@@ -1,0 +1,275 @@
+.coupon-card {
+  width: 392px;
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  border-radius: 16px;
+  overflow: hidden;
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* 头部区域 */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 12px;
+}
+
+.title-section {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.orange-tag {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background: #FF6E00;
+  border-radius: 4.27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orange-tag::before {
+  content: '';
+  position: absolute;
+  width: 8.53px;
+  height: 8.53px;
+  border: 1.28px solid #FFFFFF;
+  border-radius: 1.71px;
+  top: 3.73px;
+  left: 3.73px;
+}
+
+.orange-tag::after {
+  content: '';
+  position: absolute;
+  width: 2.73px;
+  height: 4.19px;
+  top: 6.71px;
+  left: 5.19px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2.73 4.19"><path d="M0 0.2v3.79c0 0.11 0.09 0.2 0.2 0.2h2.33c0.11 0 0.2-0.09 0.2-0.2V0.2c0-0.11-0.09-0.2-0.2-0.2H0.2C0.09 0 0 0.09 0 0.2z" fill="%23FFFFFF"/></svg>') no-repeat center;
+  background-size: contain;
+}
+
+.store-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  line-height: 1.25;
+}
+
+.arrow-icon {
+  width: 10px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status {
+  font-size: 16px;
+  font-weight: 400;
+  color: #FE4C00;
+  text-align: right;
+}
+
+/* 商品信息区域 */
+.product-section {
+  position: relative;
+  display: flex;
+  padding: 0 12px;
+  margin-bottom: 12px;
+  align-items: flex-start;
+}
+
+.product-image {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 6px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4.71px;
+  border: 0.39px solid rgba(0, 0, 0, 0.05);
+}
+
+.image-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 4.71px;
+}
+
+.product-info {
+  flex: 1;
+  margin-left: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.product-title {
+  font-size: 14px;
+  font-weight: 400;
+  color: #222222;
+  line-height: 1.43;
+  margin: 0;
+  width: 136px;
+}
+
+.expiry-date {
+  font-size: 12px;
+  font-weight: 400;
+  color: #666666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  padding: 2px 0;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 3px;
+  height: 16px;
+  border: 0.5px solid rgba(254, 97, 13, 0.2);
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 400;
+  color: #FE610D;
+  line-height: 1.45;
+}
+
+.price-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  margin-left: auto;
+  margin-top: 7px;
+  position: absolute;
+  right: 12px;
+  top: 7px;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: 400;
+  color: #222222;
+  line-height: 1;
+}
+
+.quantity {
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #666666;
+  line-height: 1.14;
+}
+
+/* 提醒区域 */
+.reminder {
+  margin: 0 12px 12px 12px;
+  padding: 8px 10px;
+  background: #F8F8F8;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #666666;
+  line-height: 1.4;
+}
+
+/* 总价区域 */
+.total-section {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 12px 12px 12px;
+}
+
+.total-price {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+}
+
+.total-price .label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #222222;
+  line-height: 1.43;
+}
+
+.total-price .amount {
+  font-size: 16px;
+  font-weight: 400;
+  color: #222222;
+  line-height: 1;
+}
+
+/* 按钮区域 */
+.button-section {
+  display: flex;
+  gap: 8px;
+  padding: 0 12px 16px 12px;
+  justify-content: flex-end;
+}
+
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px;
+  height: 34px;
+  border: 0.5px solid #E3E4E5;
+  border-radius: 6px;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 400;
+  color: #111111;
+  line-height: 1.23;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 34px;
+  border: 0.5px solid rgba(255, 68, 38, 0.5);
+  border-radius: 6px;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 600;
+  color: #FF4426;
+  line-height: 1.23;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background: rgba(255, 68, 38, 0.08);
+}
