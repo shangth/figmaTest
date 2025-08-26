@@ -1,70 +1,175 @@
-# Getting Started with Create React App
+# Figma 设计稿还原 - 团购页面
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+这是一个基于 React 的移动端团购页面应用，完全还原了 Figma 设计稿的视觉效果和交互体验。
 
-## Available Scripts
+## 🎨 设计特点
 
-In the project directory, you can run:
+- **移动端优先设计**: 针对 414px 宽度（iPhone 尺寸）优化
+- **高保真还原**: 完整复现 Figma 设计稿的视觉细节
+- **组件化架构**: 使用 React 组件进行模块化开发
+- **响应式布局**: 支持不同屏幕尺寸和横竖屏切换
 
-### `npm start`
+## 📱 功能模块
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. 状态栏
+- 时间显示（9:41）
+- 信号强度指示器
+- WiFi 图标
+- 电池电量显示
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 2. 搜索栏
+- 返回按钮
+- 搜索输入框（带占位符："一点点"）
+- 清除按钮
+- 搜索按钮（带渐变背景）
 
-### `npm test`
+### 3. 顶部标签栏
+- 可滚动标签列表：团购、智能、视频、直播、商品、用户、综合
+- 当前激活标签高亮显示
+- 底部指示器
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 4. 商家POI区域
+- 商家头像/图片
+- 商家名称
+- 类别标签（饮品、海淀区等）
+- 评价信息（人数、距离）
+- 特殊标签（排行榜、购买过等）
 
-### `npm run build`
+### 5. 团购商品卡片
+- 商品图片
+- 价格信息（现价、原价、折扣）
+- 商品名称和描述
+- 销量标签
+- 特殊标签（爆款、新品）
+- 补贴标签（快手补贴、美团补贴）
+- 价格保障标识
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 6. 直播卡片
+- 直播画面预览
+- 直播标识
+- 主播信息
+- 用户头像
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ 技术栈
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **React 19.1.1**: 现代化的前端框架
+- **CSS3**: 原生CSS，包含Flexbox、Grid布局
+- **SVG 图标**: 可缩放矢量图形，支持高分辨率屏幕
+- **响应式设计**: 媒体查询适配不同设备
 
-### `npm run eject`
+## 📁 项目结构
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+src/
+├── components/
+│   ├── StatusBar.js       # 状态栏组件
+│   ├── SearchHeader.js    # 搜索栏组件
+│   ├── POICard.js         # 商家POI卡片组件
+│   ├── GroupBuyCard.js    # 团购商品卡片组件
+│   └── LiveCard.js        # 直播卡片组件
+├── App.js                 # 主应用组件
+├── App.css                # 主样式文件
+└── index.js              # 应用入口
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🎯 设计亮点
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 1. 像素级还原
+- 严格按照 Figma 设计稿的尺寸、颜色、字体进行实现
+- 精确的间距和对齐
+- 一致的视觉风格
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 2. 交互体验
+- 横向滚动的商品列表
+- 平滑的滚动效果
+- 点击反馈动画
 
-## Learn More
+### 3. 性能优化
+- 组件化开发，提高代码复用性
+- CSS 优化，减少重复样式
+- 图片懒加载准备（SVG占位符）
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 4. 移动端适配
+- Touch 友好的滚动
+- 合适的点击区域大小
+- 横竖屏适配
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🚀 运行项目
 
-### Code Splitting
+```bash
+# 安装依赖
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# 启动开发服务器
+npm start
 
-### Analyzing the Bundle Size
+# 构建生产版本
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📊 核心数据结构
 
-### Making a Progressive Web App
+### POI 商家信息
+```javascript
+{
+  name: "沪上阿姨（西二旗店）",
+  category: "饮品",
+  location: "海淀区",
+  views: "10人看过",
+  distance: "3.3km",
+  ranking: "北京饮品畅销榜 TOP2", // 可选
+  isPurchased: true, // 可选
+  reviews: "太好喝啦" // 可选
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 团购商品信息
+```javascript
+{
+  currentPrice: "18.9",
+  originalPrice: "¥29",
+  discount: "4.5折",
+  title: "杨枝甘露双倍芒果",
+  subtitle: "西柚粒冰沙",
+  soldCount: "已抢259",
+  specialTag: { text: "爆款", type: "hot" }, // 可选
+  subsidyType: "kuaishou", // 可选
+  priceGuarantee: "快手更低价" // 可选
+}
+```
 
-### Advanced Configuration
+## 🎨 设计细节
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 颜色方案
+- 主色调: `#FE3666` (粉红色)
+- 背景色: `#FFFFFF` (白色)
+- 文字色: `#222222` (深灰)
+- 次要文字: `#666666` / `#9C9C9C` (灰色)
+- 背景灰: `#F8F8F8` / `#F2F3F7`
 
-### Deployment
+### 字体规范
+- 主字体: PingFang SC
+- 备用字体: -apple-system, BlinkMacSystemFont, sans-serif
+- 字重: 400 (Regular), 500 (Medium), 600 (Semibold)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### 圆角规范
+- 按钮圆角: 8px
+- 卡片圆角: 4px
+- 小标签圆角: 3px
 
-### `npm run build` fails to minify
+## 📱 浏览器兼容性
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- ✅ iOS Safari
+- ✅ Android Chrome
+- ✅ Chrome (桌面)
+- ✅ Firefox
+- ✅ Safari (桌面)
+
+## 🔄 Future Enhancements
+
+- [ ] 添加真实图片资源
+- [ ] 实现点击交互功能
+- [ ] 添加数据懒加载
+- [ ] 集成真实API接口
+- [ ] 添加骨架屏加载状态
+- [ ] 实现下拉刷新功能
