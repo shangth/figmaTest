@@ -1,0 +1,158 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 2px;
+  font-family: 'PingFang SC', sans-serif;
+}
+
+.tag-text {
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+/* 默认标签 */
+.tag-default {
+  background: rgba(254, 54, 102, 0.05);
+  padding: 2px 4px;
+}
+
+.tag-default .tag-text {
+  color: #FE3666;
+  font-size: 8px;
+}
+
+/* 热门标签 */
+.tag-hot {
+  background: rgba(254, 54, 102, 0.05);
+  padding: 2px 4px;
+  border-radius: 2px 0 0 2px;
+}
+
+.tag-hot .tag-text {
+  color: #FE3666;
+  font-size: 8px;
+}
+
+/* 评分标签 */
+.tag-rating {
+  background: rgba(254, 54, 102, 0.05);
+  padding: 2px 4px;
+  border-radius: 2px 0 0 2px;
+}
+
+.tag-rating .tag-text {
+  color: #FE3666;
+  font-size: 8px;
+}
+
+/* 折扣标签 */
+.tag-discount {
+  background: #FE3666;
+  border: 0.2px solid #FE3666;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.tag-discount .tag-text {
+  color: #FE3666;
+  font-size: 8px;
+  background: #fff;
+  padding: 1px 2px;
+  border-radius: 2px;
+}
+
+/* 团购标签 */
+.tag-group {
+  background: #FF6E00;
+  border-radius: 3px;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.tag-group .tag-text {
+  color: #fff;
+  font-size: 9px;
+  font-weight: 600;
+  position: absolute;
+  line-height: 1;
+}
+
+/* 直播标签 */
+.tag-live {
+  background: linear-gradient(180deg, #F73B68 0%, #F73B68 59%);
+  border-radius: 0 0 0 0;
+  padding: 1px 4px;
+}
+
+.tag-live .tag-text {
+  color: #fff;
+  font-size: 8px;
+  font-weight: 500;
+}
+
+/* 秒杀标签 */
+.tag-seckill {
+  background: #FF4426;
+  border-radius: 3px;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tag-seckill .tag-text {
+  color: #fff;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+/* 灰色标签 */
+.tag-gray {
+  background: rgba(239, 239, 239, 0.5);
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.tag-gray .tag-text {
+  color: #666;
+  font-size: 9px;
+  font-weight: 400;
+}
+
+/* 徽章标签 */
+.tag-badge {
+  background: linear-gradient(90deg, #FFF6E5 0%, #FFECCE 98%);
+  border-radius: 3px;
+  padding: 0 4px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.tag-badge .tag-text {
+  color: #B27436;
+  font-size: 9px;
+  font-weight: 400;
+  margin-left: 16px;
+}
+
+.tag-badge::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  width: 12px;
+  height: 10px;
+  background: linear-gradient(159deg, #EFCF97 0%, #EFBC6F 91%);
+  border-radius: 2px;
+}
+
+/* 小标签 */
+.tag-small {
+  transform: scale(0.9);
+}

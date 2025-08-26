@@ -1,0 +1,78 @@
+.group-buy-card {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 1px 0;
+  width: 100%;
+}
+
+.card-header {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.seckill-bg {
+  position: absolute;
+  top: 0;
+  left: 37px;
+  width: 45px;
+  height: 14px;
+  background: rgba(255, 68, 38, 0.1);
+  border-radius: 0 0 0 0;
+}
+
+.card-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 4px;
+}
+
+.price-section {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.current-price {
+  font-size: 14px;
+  font-weight: 500;
+  color: #FE3666;
+  font-family: 'PingFang SC', sans-serif;
+  line-height: 1.43;
+  text-align: justify;
+}
+
+.original-price {
+  position: relative;
+  width: 24px;
+  height: 14px;
+}
+
+.price-text {
+  font-size: 10px;
+  font-weight: 400;
+  color: #9C9C9C;
+  font-family: 'PingFang SC', sans-serif;
+  line-height: 1.4;
+}
+
+.strikethrough {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 24px;
+  height: 0.8px;
+  background-color: #9C9C9C;
+}
+
+.description {
+  font-size: 12px;
+  font-weight: 400;
+  color: #222;
+  font-family: 'PingFang SC', sans-serif;
+  line-height: 1.42;
+  margin: 0;
+  flex: 1;
+}

@@ -1,0 +1,31 @@
+.star-rating {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  width: 16px;
+  height: 16px;
+}
+
+.star.full path {
+  fill: #FE3666;
+}
+
+.star.empty path {
+  fill: rgba(254, 54, 102, 0.3);
+}
+
+.rating-text {
+  margin-left: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #FE3666;
+  font-family: 'PingFang SC', sans-serif;
+}

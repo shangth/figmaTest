@@ -1,38 +1,161 @@
+/* 全局重置和基础样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  width: 100%;
+  max-width: 414px;
+  margin: 0 auto;
+  background: #fff;
   min-height: 100vh;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* 主内容区域 */
+.main-content {
+  padding-top: 4px;
+}
+
+/* 店铺区域 */
+.store-section {
+  background: #fff;
+  border-bottom: 4px solid #f5f5f5;
+}
+
+/* 标签区域 */
+.tags-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 19px;
+  flex-wrap: wrap;
+}
+
+/* 团购商品区域 */
+.group-buy-section {
+  padding: 8px 19px;
   display: flex;
   flex-direction: column;
+  gap: 22px;
+}
+
+/* 已折叠商家区域 */
+.collapsed-stores {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 1) 100%);
+  padding: 16px 0;
+}
+
+.collapsed-banner {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 4px;
+  padding: 0 135px;
 }
 
-.App-link {
-  color: #61dafb;
+.collapsed-text {
+  font-size: 14px;
+  color: #222;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.expand-icon {
+  width: 14px;
+  height: 14px;
+}
+
+/* 推荐标题 */
+.recommendation-header {
+  padding: 4px 19px 0;
+  background: #fff;
+}
+
+.recommendation-header h2 {
+  font-size: 17px;
+  font-weight: 500;
+  color: #000;
+  font-family: 'PingFang SC', sans-serif;
+  line-height: 1.41;
+  margin: 0;
+  padding: 0;
+}
+
+/* 其他店铺区域 */
+.other-stores {
+  background: #fff;
+  padding-top: 8px;
+}
+
+.store-group {
+  border-bottom: 4px solid #f5f5f5;
+  margin-bottom: 4px;
+}
+
+.store-group:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* 小型团购区域 */
+.group-buy-mini-section {
+  padding: 8px 19px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* 移动端适配 */
+@media (max-width: 414px) {
+  .App {
+    max-width: 100vw;
+    width: 100vw;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* iOS Safari适配 */
+@supports (-webkit-overflow-scrolling: touch) {
+  .App {
+    -webkit-overflow-scrolling: touch;
   }
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+/* 确保在小屏幕设备上的正确显示 */
+@media (max-width: 375px) {
+  .collapsed-banner {
+    padding: 0 100px;
+  }
+  
+  .collapsed-text {
+    font-size: 13px;
+  }
+}
+
+/* 防止横向滚动 */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* 优化触摸体验 */
+button, .tag, .tab-item {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
