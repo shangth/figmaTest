@@ -1,0 +1,25 @@
+.caption-editor {
+  background-color: #17191C;
+  min-height: 100vh;
+  color: #F0F2F5;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.caption-editor__container {
+  display: flex;
+  width: 512px;
+  height: 767px;
+  gap: 2px;
+  margin: 0 auto;
+  background-color: #17191C;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .caption-editor__container {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
+}

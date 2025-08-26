@@ -1,0 +1,37 @@
+.conversation-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 12px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.conversation-area__indicator {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 6px;
+  height: 100px;
+  background-color: #424243;
+  border-radius: 4px;
+}
+
+/* 自定义滚动条 */
+.conversation-area::-webkit-scrollbar {
+  width: 6px;
+}
+
+.conversation-area::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.conversation-area::-webkit-scrollbar-thumb {
+  background: #424243;
+  border-radius: 4px;
+}
+
+.conversation-area::-webkit-scrollbar-thumb:hover {
+  background: #575859;
+}
