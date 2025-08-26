@@ -1,0 +1,328 @@
+/* 模态框覆盖层 */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  /* 模态框主体 */
+  .modal {
+    background: #FFFFFF;
+    border-radius: 4px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    width: 480px;
+    max-height: 90vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header 样式 */
+  .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    border-bottom: 1px solid #E5E6EB;
+    gap: 44px;
+  }
+  
+  .header-balancer {
+    width: 0;
+    height: 100%;
+  }
+  
+  .modal-title {
+    font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #1D2129;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+  }
+  
+  .close-button {
+    width: 16px;
+    height: 16px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+  }
+  
+  .close-button:hover {
+    opacity: 0.7;
+  }
+  
+  /* Body 样式 */
+  .modal-body {
+    padding: 24px 20px;
+    background: #F7F8FA;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  /* 表单项样式 */
+  .form-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .label-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding-bottom: 8px;
+  }
+  
+  .required-asterisk {
+    color: #F53F3F;
+    font-size: 12px;
+    line-height: 1;
+    width: 8px;
+    height: 8px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  .form-label {
+    font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5714;
+    color: #4E5969;
+    margin: 0;
+  }
+  
+  .help-button {
+    width: 14px;
+    height: 14px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+  }
+  
+  /* 输入框样式 */
+  .input-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 5px 12px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    background: #F2F3F5;
+    font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5714;
+    color: #1D2129;
+    outline: none;
+    transition: all 0.2s;
+  }
+  
+  .form-input::placeholder {
+    color: #86909C;
+  }
+  
+  .form-input:focus {
+    background: #FFFFFF;
+    border-color: #165DFF;
+    box-shadow: 0 0 0 2px rgba(22, 93, 255, 0.1);
+  }
+  
+  .form-input.error {
+    border-color: #F53F3F;
+    background: #FFFFFF;
+  }
+  
+  .form-input.error:focus {
+    box-shadow: 0 0 0 2px rgba(245, 63, 63, 0.1);
+  }
+  
+  /* 文本域样式 */
+  .textarea-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-textarea {
+    width: 100%;
+    padding: 4px 12px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    background: #F2F3F5;
+    font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5714;
+    color: #1D2129;
+    outline: none;
+    resize: vertical;
+    min-height: 128px;
+    transition: all 0.2s;
+  }
+  
+  .form-textarea::placeholder {
+    color: #86909C;
+  }
+  
+  .form-textarea:focus {
+    background: #FFFFFF;
+    border-color: #165DFF;
+    box-shadow: 0 0 0 2px rgba(22, 93, 255, 0.1);
+  }
+  
+  .form-textarea.error {
+    border-color: #F53F3F;
+    background: #FFFFFF;
+  }
+  
+  .form-textarea.error:focus {
+    box-shadow: 0 0 0 2px rgba(245, 63, 63, 0.1);
+  }
+  
+  .textarea-resizer {
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    pointer-events: none;
+  }
+  
+  /* 错误文本样式 */
+  .error-text {
+    color: #F53F3F;
+    font-size: 12px;
+    font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    margin-top: 4px;
+  }
+  
+  /* Footer 样式 */
+  .modal-footer {
+    padding: 16px 20px;
+    border-top: 1px solid #E5E6EB;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: flex-end;
+    gap: 416px;
+  }
+  
+  .button-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  /* 按钮样式 */
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 16px;
+    border-radius: 2px;
+    font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5714;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+    min-width: 64px;
+  }
+  
+  .button-secondary {
+    background: #F2F3F5;
+    color: #4E5969;
+  }
+  
+  .button-secondary:hover {
+    background: #E5E6EB;
+  }
+  
+  .button-secondary:active {
+    background: #C9CDD4;
+  }
+  
+  .button-primary {
+    background: #165DFF;
+    color: #FFFFFF;
+  }
+  
+  .button-primary:hover {
+    background: #4080FF;
+  }
+  
+  .button-primary:active {
+    background: #0E42D2;
+  }
+  
+  .button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  
+  /* 响应式设计 */
+  @media (max-width: 600px) {
+    .modal {
+      width: 90vw;
+      margin: 20px;
+    }
+    
+    .modal-header {
+      padding: 12px 16px;
+    }
+    
+    .modal-body {
+      padding: 20px 16px;
+    }
+    
+    .modal-footer {
+      padding: 16px;
+    }
+    
+    .footer-content {
+      gap: 0;
+      justify-content: space-between;
+    }
+  }
+  
