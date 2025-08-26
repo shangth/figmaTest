@@ -1,0 +1,425 @@
+/* VotingCard 主容器 */
+.voting-card {
+  width: 340px;
+  background: linear-gradient(203deg, rgba(49, 49, 80, 1) 0%, rgba(28, 28, 51, 1) 71%);
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  position: relative;
+  margin: 20px auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* 背景模糊效果 */
+.background-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #313150;
+  filter: blur(120px);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+/* 投票区域 */
+.voting-section {
+  position: relative;
+  padding: 16px 9px;
+  border-radius: 8px 8px 0 0;
+  background: linear-gradient(203deg, rgba(49, 49, 80, 1) 0%, rgba(28, 28, 51, 1) 71%);
+}
+
+.voting-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 问题区域 */
+.question-section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.main-question {
+  color: #FFDFBF;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+  text-align: left;
+}
+
+.sub-text {
+  color: #FFDFBF;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  opacity: 0.6;
+  margin: 0;
+  text-align: left;
+}
+
+/* 选项容器 */
+.options-container {
+  position: relative;
+  width: 322px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 选项卡片 */
+.option-card {
+  position: relative;
+  width: 135px;
+  height: 50px;
+  border-radius: 10px 10px 0 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.option-card:hover {
+  transform: scale(1.02);
+}
+
+.option-card.selected {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 223, 191, 0.3);
+}
+
+.option-card.selected .option-background {
+  filter: brightness(1.1);
+}
+
+.option-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.yes-option .option-background {
+  background: linear-gradient(114deg, rgba(255, 232, 195, 1) 4%, rgba(250, 192, 140, 1) 100%);
+}
+
+.no-option .option-background {
+  background: linear-gradient(162deg, rgba(27, 69, 255, 1) 0%, rgba(87, 94, 255, 1) 100%);
+}
+
+.option-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px 0;
+  height: 100%;
+  justify-content: center;
+}
+
+.option-text {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 2px;
+}
+
+.no-option .option-text {
+  text-align: center;
+}
+
+.option-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.return-text {
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+.multiplier-container {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.close-icon {
+  color: #FFFFFF;
+  font-size: 14px;
+  opacity: 0.6;
+  width: 14px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.multiplier {
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0.6;
+}
+
+.times-text {
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+/* VS 区域 */
+.vs-section {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 0;
+}
+
+.vs-icon {
+  width: 28px;
+  height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.vs-icon:hover {
+  transform: scale(1.1);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* 评论区域 */
+.comments-section {
+  position: relative;
+  padding: 10px 0;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 0 0 8px 8px;
+}
+
+.comments-content {
+  position: relative;
+  z-index: 2;
+  width: 340px;
+  height: 24px;
+  padding: 0 1px;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 338px;
+  height: 24px;
+  padding: 0 5px 0 7px;
+}
+
+/* 热评标签 */
+.hot-tag {
+  background: linear-gradient(114deg, rgba(255, 232, 195, 1) 4%, rgba(250, 192, 140, 1) 100%);
+  color: #FFFFFF;
+  font-family: 'Alibaba PuHuiTi 2.0', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 2;
+  text-align: center;
+  padding: 0 8px;
+  border-radius: 4px;
+}
+
+/* 用户信息 */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  margin: 0 12px;
+}
+
+.avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #19191E;
+  border: 0.5px solid #FFD7B2;
+}
+
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+  border-radius: 50%;
+}
+
+.user-comment {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.username {
+  color: #FFDFBF;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.comment-text {
+  color: #FFDFBF;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+/* 评论操作 */
+.comment-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.like-section {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.like-section:hover {
+  transform: scale(1.1);
+}
+
+.heart-icon {
+  color: #FFDFBF;
+  font-size: 9px;
+  opacity: 0.6;
+  width: 9.18px;
+  height: 9.17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.heart-icon.liked {
+  color: #ff6b6b;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.like-count {
+  color: #FFDFBF;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.25;
+  opacity: 0.6;
+}
+
+.join-discussion {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.join-discussion:hover {
+  opacity: 0.8;
+}
+
+.join-discussion span {
+  color: #FFDFBF;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.arrow-right {
+  color: #FFDFBF;
+  font-size: 10px;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 响应式设计 */
+@media (max-width: 375px) {
+  .voting-card {
+    width: 100%;
+    max-width: 340px;
+    margin: 10px;
+  }
+  
+  .options-container {
+    width: 100%;
+    max-width: 322px;
+  }
+  
+  .option-card {
+    width: 130px;
+  }
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.voting-card {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.option-card {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.option-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.option-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
