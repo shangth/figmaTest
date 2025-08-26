@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# Figma 设计稿还原 - 超粉团召集令
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+这是一个基于 React 的移动端界面，完全还原了 Figma 设计稿中的"超粉团召集令"页面。
 
-## Available Scripts
+## 🎨 设计还原
 
-In the project directory, you can run:
+基于 Figma 设计稿：[M0-码灵 AICode Demo](https://www.figma.com/design/SRpV5DSpKq0Pto75dP4IyO/M0-%E7%A0%81%E7%81%B5-AICode-Demo?node-id=9-14366&t=4w2G5lShC6Ou4J4M-4)
 
-### `npm start`
+### 功能模块
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **顶部Header** - 包含渐变背景和艺术字标题
+2. **奖励面板** - 展示三种不同的加成卡奖励
+3. **任务面板** - 显示任务进度和操作按钮
+4. **底部副标题栏** - 带有渐变边框的文字提示
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 技术特色
 
-### `npm test`
+- 📱 移动端优先的响应式设计 (414px 标准宽度)
+- 🎨 高度还原的渐变色彩和视觉效果
+- 🏗️ 组件化的 React 架构
+- 💎 像素级精确的 CSS 样式
+- 🖼️ 优化的图片资源管理
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 快速开始
 
-### `npm run build`
+```bash
+# 安装依赖
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 启动开发服务器
+npm start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# 在浏览器中访问 http://localhost:3000
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📁 项目结构
 
-### `npm run eject`
+```
+src/
+├── components/          # React 组件
+│   ├── Header.js       # 头部组件
+│   ├── Header.css      # 头部样式
+│   ├── GiftPanel.js    # 奖励面板组件
+│   ├── GiftPanel.css   # 奖励面板样式
+│   ├── TaskPanel.js    # 任务面板组件
+│   ├── TaskPanel.css   # 任务面板样式
+│   ├── SubtitleBar.js  # 副标题栏组件
+│   └── SubtitleBar.css # 副标题栏样式
+├── assets/             # 图片资源
+│   ├── header-bg.png   # 头部背景图
+│   ├── gift-icon-1.png # 奖励图标1
+│   ├── gift-icon-2.png # 奖励图标2
+│   └── index.js        # 资源导出文件
+├── App.js              # 主应用组件
+├── App.css             # 全局样式
+└── index.js            # 应用入口
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🎯 还原特点
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **颜色准确性**: 使用了设计稿中的精确色值和渐变
+- **字体效果**: 实现了阴影效果和渐变文字
+- **布局精确**: 严格按照设计稿的间距和尺寸
+- **交互状态**: 完成和待完成任务的不同视觉状态
+- **响应式**: 支持桌面端和移动端的完美显示
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🛠️ 开发工具
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- React 19.1.1
+- CSS3 (Flexbox + Grid)
+- JavaScript ES6+
+- Create React App
 
-## Learn More
+## 📱 适配说明
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- 移动端: 100% 屏幕宽度，完美适配
+- 桌面端: 414px 固定宽度，居中显示，带有阴影效果
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+这个项目展示了如何将 Figma 设计稿完美转换为可交互的 React 应用，是学习移动端界面开发的绝佳案例。
