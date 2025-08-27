@@ -1,0 +1,260 @@
+/* Caption Editor Styles */
+.caption-editor {
+  display: flex;
+  width: 512px;
+  height: 767px;
+  background: #17191C;
+  border-radius: 16px;
+  overflow: hidden;
+  gap: 2px;
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 88px;
+  height: 767px;
+  background: #17191C;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 0 0 0;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.sidebar-item {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.sidebar-item.selected .sidebar-icon-container {
+  background: #424243;
+  border-radius: 12px;
+}
+
+.sidebar-icon-container {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.sidebar-glow {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 116, 41, 0.1);
+  top: -29px;
+  right: -23px;
+  opacity: 0.3;
+}
+
+.sidebar-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.sidebar-label {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #BBBDBF;
+  text-align: center;
+  margin-top: 2px;
+  min-width: 29px;
+}
+
+.sidebar-label.selected {
+  font-weight: 500;
+  color: #FAFCFF;
+  min-width: 50px;
+}
+
+/* Main Content Styles */
+.main-content {
+  flex: 1;
+  width: 422px;
+  background: #17191C;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+.header {
+  height: 74px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px 0 0;
+}
+
+.tabs {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 10px 24px 16px;
+  gap: 24px;
+}
+
+.tab {
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
+  position: relative;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #575859;
+  cursor: pointer;
+}
+
+.tab.active {
+  color: #FAFCFF;
+}
+
+.tab-indicator {
+  position: absolute;
+  bottom: 0;
+  width: 19px;
+  height: 4px;
+  background: linear-gradient(78.34deg, #ff7429 0%, #ff7429 50%, #9747ff 100%);
+  border-radius: 7.77px;
+  box-shadow: 0 3.89px 7.77px rgba(0, 171, 214, 0.16);
+}
+
+.settings-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.settings-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Caption List Styles */
+.caption-list {
+  flex: 1;
+  padding: 0 12px;
+  gap: 4px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-y: auto;
+}
+
+.caption-item {
+  background: transparent;
+  border-radius: 12px;
+  padding: 12px 12px 4px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4px;
+}
+
+.caption-header {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 12px;
+}
+
+.speaker-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.speaker-name {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  min-width: 56px;
+}
+
+.time-badge {
+  background: transparent;
+  border-radius: 12px;
+  padding: 3px 6px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #898A8C;
+  min-width: 105px;
+  text-align: center;
+}
+
+.caption-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  padding-right: 24px;
+  padding-bottom: 8px;
+  align-items: flex-start;
+  width: 350px;
+}
+
+.word {
+  background: transparent;
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #F0F2F5;
+  letter-spacing: 0.32px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.word.playing {
+  font-weight: 500;
+  color: #FF8543;
+}
+
+/* Scrollbar */
+.scrollbar {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  width: 6px;
+  height: 100px;
+  background: #424243;
+  border-radius: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .caption-editor {
+    width: 100%;
+    max-width: 512px;
+  }
+}
