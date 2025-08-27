@@ -1,4 +1,458 @@
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.vote-card {
+  box-sizing: border-box;
+  height: 183px;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: center;
+  padding: 0px;
+  position: relative;
+}
+
+/* 主要内容区域 */
+.main-content {
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-basis: 139px;
+  width: 340px;
+  height: 139px;
+  border-radius: 8px 8px 0px 0px;
+  background: #1C1C33;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  padding: 16px 9px;
+  gap: 10px;
+  position: relative;
+}
+
+.background-image {
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-basis: 212px;
+  width: 358px;
+  height: 212px;
+  position: absolute;
+  bottom: -73px;
+  right: -18px;
+  z-index: 1;
+}
+
+.text-content {
+  box-sizing: border-box;
+  flex-basis: 47px;
+  width: 243px;
+  height: 47px;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  padding: 0px;
+  gap: 5px;
+  z-index: 2;
+  position: relative;
+}
+
+.title {
+  box-sizing: border-box;
+  min-width: 243px;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 500;
+  color: var(--main-color, #FFDFBF);
+}
+
+.subtitle {
+  box-sizing: border-box;
+  opacity: 0.6;
+  min-width: 108px;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  color: var(--主色, #FFDFBF);
+}
+
+/* 投票按钮区域 */
+.vote-buttons {
+  box-sizing: border-box;
+  flex-basis: 50px;
+  width: 322px;
+  height: 50px;
+  position: relative;
+  z-index: 4;
+}
+
+.vote-option {
+  position: absolute;
+  top: 0px;
+  width: 135px;
+  height: 50px;
+  border-radius: 10px 10px 0px;
+  cursor: pointer;
+}
+
+.vote-option.left {
+  left: 0px;
+}
+
+.vote-option.right {
+  right: 0px;
+}
+
+.button-bg {
+  position: absolute;
+  top: 0px;
+  width: 139px;
+  height: 50px;
+  z-index: 2;
+}
+
+.vote-option.left .button-bg {
+  right: -4px;
+}
+
+.vote-option.right .button-bg {
+  left: -4px;
+}
+
+.button-content {
+  position: absolute;
+  top: 4px;
+  width: 71px;
+  height: 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: center;
+  padding: 0px;
+  z-index: 3;
+}
+
+.vote-option.left .button-content {
+  left: 32px;
+}
+
+.vote-option.right .button-content {
+  left: 30px;
+  width: 75px;
+}
+
+.option-text {
+  box-sizing: border-box;
+  min-width: 16px;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.vote-option.right .option-text {
+  min-width: 32px;
+  text-align: center;
+}
+
+.reward-info {
+  box-sizing: border-box;
+  flex-basis: 18px;
+  width: 71px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+  align-items: center;
+  gap: 2px;
+}
+
+.vote-option.right .reward-info {
+  width: 75px;
+}
+
+.reward-label {
+  box-sizing: border-box;
+  opacity: 0.6;
+  min-width: 24px;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.diamond-icon {
+  box-sizing: border-box;
+  flex-basis: 14px;
+  width: 14px;
+  height: 18px;
+}
+
+.reward-value {
+  box-sizing: border-box;
+  opacity: 0.6;
+  min-width: 21px;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.vote-option.right .reward-value {
+  min-width: 25px;
+}
+
+.reward-unit {
+  box-sizing: border-box;
+  opacity: 0.6;
+  min-width: 12px;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+/* VS图标 */
+.vs-icon {
+  position: absolute;
+  bottom: -2px;
+  right: 146.99999809265137px;
+  width: 28px;
+  height: 51px;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: center;
+  padding: 15px 0px;
+  gap: 10px;
+  z-index: 2;
+}
+
+.vs-icon img {
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-basis: 21px;
+  width: 28px;
+  height: 21px;
+}
+
+/* 评论区域 */
+.comment-section {
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-basis: 44px;
+  width: 340px;
+  height: 44px;
+  border-radius: 0px 0px 8px 8px;
+  background: #1C1C33;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: center;
+  padding: 10px 0px;
+  gap: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.comment-bg {
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-basis: 212px;
+  width: 358px;
+  height: 212px;
+  position: absolute;
+  bottom: -168px;
+  right: -18px;
+  z-index: 1;
+}
+
+.comment-content {
+  box-sizing: border-box;
+  flex-basis: 24px;
+  width: 340px;
+  height: 24px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 7px;
+}
+
+.comment-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+.hot-tag {
+  box-sizing: border-box;
+  min-width: 28px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 28px;
+  font-family: "Alibaba PuHuiTi 2.0", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 800;
+  background: linear-gradient(78.49deg, #ffe8c3 15.2%, #fac08c 87.91%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.avatar-container {
+  position: relative;
+  width: 26px;
+  height: 26px;
+}
+
+.avatar-bg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 26px;
+  height: 26px;
+  z-index: 1;
+}
+
+.avatar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 26px;
+  height: 26px;
+  z-index: 2;
+}
+
+.user-comment {
+  display: flex;
+  align-items: center;
+}
+
+.username {
+  box-sizing: border-box;
+  min-width: 60px;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 500;
+  color: var(--主色, #FFDFBF);
+}
+
+.comment-text {
+  box-sizing: border-box;
+  opacity: 0.6;
+  min-width: 84px;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  color: #FFDFBF;
+}
+
+.comment-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.like-info {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.like-icon {
+  width: 9px;
+  height: 9px;
+}
+
+.like-count {
+  box-sizing: border-box;
+  opacity: 0.6;
+  min-width: 22px;
+  text-align: right;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 15px;
+  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  color: #FFDFBF;
+}
+
+.join-discussion {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  cursor: pointer;
+}
+
+.join-text {
+  box-sizing: border-box;
+  min-width: 48px;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 500;
+  color: var(--主色, #FFDFBF);
+}
+
+.arrow-icon {
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 10px;
+  height: 10px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+  
+  .vote-card {
+    max-width: 100%;
+    width: 340px;
+  }
+}
+
+@media (max-width: 360px) {
+  .vote-card {
+    width: 100%;
+    max-width: 340px;
+  }
+}.App {
   text-align: center;
 }
 
