@@ -1,38 +1,334 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.order-card {
+  box-sizing: border-box;
+  height: 274px;
+  width: 392px;
+  border: 1px solid #D9D9D9;
+  border-radius: 16px;
+  background: #FFFFFF;
+  position: relative;
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Header section */
+.header-section {
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  right: 12px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.store-info {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 268px;
+}
+
+.store-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.store-name {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #000000;
+  min-width: 234px;
+}
+
+.pro-text {
+  /* Inherits parent styles */
+}
+
+.arrow-icon {
+  width: 10px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.status-text {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #FE4C00;
+  text-align: right;
+}
+
+/* Product section */
+.product-section {
+  position: absolute;
+  top: 50px;
+  left: 12px;
+  width: 368px;
+  height: 80px;
+}
+
+.product-image {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 80px;
+  height: 80px;
+  border-radius: 6px;
+  background: #FFFFFF;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.product-info {
+  position: absolute;
+  top: 7px;
+  left: 94px;
+  width: 136px;
+  height: 66px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+.product-name {
+  width: 136px;
+  min-width: 136px;
+  text-align: justify;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #222222;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.expiry-date {
+  min-width: 123px;
+  text-align: justify;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #666666;
+}
+
+.tags-container {
+  width: 108px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  padding: 2px 0px;
+  gap: 8px;
+}
+
+.tag {
+  height: 16px;
+  border: 0.5px solid rgba(254, 97, 13, 0.2);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  padding: 1.5px 2.5px;
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #FE610D;
+  white-space: nowrap;
+}
+
+.tag:first-child {
+  width: 61px;
+}
+
+.tag:last-child {
+  width: 39px;
+}
+
+.price-section {
+  position: absolute;
+  top: 7px;
+  right: 0px;
+  width: 53px;
+  height: 42px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.price {
+  min-width: 53px;
+  text-align: right;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #222222;
+}
+
+.quantity {
+  min-width: 13px;
+  text-align: right;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  color: #666666;
+}
+
+/* Notice section */
+.notice-section {
+  position: absolute;
+  bottom: 96px;
+  left: 12px;
+  width: 368px;
+  height: 36px;
+  border-radius: 6px;
+  background: #F8F8F8;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.notice-text {
+  font-size: 14px;
+  line-height: normal;
+  font-weight: 400;
+  color: #666666;
+}
+
+.highlight {
+  color: #222222;
+}
+
+/* Total section */
+.total-section {
+  position: absolute;
+  bottom: 60px;
+  right: 12px;
+  width: 101px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 3px;
+}
+
+.total-label {
+  min-width: 28px;
+  text-align: right;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #222222;
+}
+
+.total-price {
+  min-width: 70px;
+  text-align: right;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #222222;
+}
+
+/* Action buttons */
+.action-buttons {
+  position: absolute;
+  bottom: 14px;
+  right: 12px;
+  width: 244px;
+  height: 34px;
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  width: 76px;
+  height: 34px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9.5px 11.5px;
+  font-size: 13px;
+  line-height: 16px;
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.action-btn.secondary {
+  border: 0.5px solid #E3E4E5;
+  background: transparent;
+  font-weight: 400;
+  color: #111111;
+}
+
+.action-btn.secondary:hover {
+  background: #f5f5f5;
+}
+
+.action-btn.primary {
+  border: 0.5px solid rgba(255, 68, 38, 0.5);
+  background: transparent;
+  font-weight: 600;
+  color: #FF4426;
+}
+
+.action-btn.primary:hover {
+  background: rgba(255, 68, 38, 0.05);
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .App {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .order-card {
+    width: 100%;
+    max-width: 392px;
+    min-width: 320px;
+  }
+}
+
+@media (max-width: 360px) {
+  .order-card {
+    min-width: 300px;
+  }
+  
+  .store-info {
+    width: 200px;
+  }
+  
+  .store-name {
+    min-width: 170px;
+    font-size: 15px;
+  }
+  
+  .product-section {
+    width: 276px;
+  }
+  
+  .notice-section {
+    width: 276px;
+  }
+  
+  .action-buttons {
+    width: 228px;
+  }
+  
+  .action-btn {
+    width: 70px;
+    font-size: 12px;
   }
 }
