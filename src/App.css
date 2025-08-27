@@ -1,38 +1,760 @@
+/* CSS Variables */
+:root {
+  --partbg-color: #FF4F52;
+  --main-color: #FFF8EC;
+  --highlight-color: #FFDB4D;
+  --title-text: transparent;
+  --pk-pkrogress-right-color: #1E93FF;
+  --white-color: #FFFFFF;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  background-color: #f0f0f0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.ranking-card {
+  box-sizing: border-box;
+  width: 382px;
+  height: 208px;
+  border-radius: 16px;
+  background: var(--partbg-color, #FF4F52);
   display: flex;
   flex-direction: column;
+  justify-content: normal;
   align-items: center;
+  padding: 16px;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-overlay {
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-basis: 162px;
+  width: 382px;
+  height: 162px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 16px 16px 0px 0px;
+  background: #FF243D;
+}
+
+.top-animated-bg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 382px;
+  height: 72px;
+  border-radius: 16px 16px 0px 0px;
+  overflow: hidden;
+  z-index: 4;
+}
+
+.animated-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  box-sizing: border-box;
+  flex-basis: 176px;
+  width: 382px;
+  height: 176px;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+  z-index: 2;
+}
+
+.user-info-section {
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-basis: 44px;
+  width: 382px;
+  height: 44px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.user-info-container {
+  box-sizing: border-box;
+  flex-basis: 44px;
+  width: 382px;
+  height: 44px;
+  align-self: stretch;
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  padding: 0px 12px;
+  gap: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.avatar-container {
+  box-sizing: border-box;
+  flex-basis: 36px;
+  width: 36px;
+  height: 36px;
+  position: relative;
+}
+
+.avatar-bg {
+  box-sizing: border-box;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 36px;
+  height: 36px;
+}
+
+.avatar-main {
+  box-sizing: border-box;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 36px;
+  height: 36px;
+  z-index: 2;
+}
+
+.live-indicator {
+  box-sizing: border-box;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 12px;
+  height: 12px;
+  z-index: 5;
+}
+
+.live-bg {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 12px;
+  height: 12px;
+}
+
+.live-icon {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 2.8787598609924316px;
+  left: 3.01904296875px;
+  width: 6px;
+  height: 6px;
+  z-index: 2;
+}
+
+.ranking-info {
+  box-sizing: border-box;
+  flex-basis: 113px;
+  width: 113px;
+  height: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px;
+}
+
+.rank-text {
+  box-sizing: border-box;
+  flex-basis: 24px;
+  width: 61px;
+  height: 24px;
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  padding: 0px;
+  gap: 4px;
+}
+
+.rank-prefix, .rank-suffix {
+  box-sizing: border-box;
+  min-width: 16px;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 500;
+  color: var(--main-color, #FFF8EC);
+}
+
+.rank-number {
+  box-sizing: border-box;
+  min-width: 25px;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Alte DIN 1451 Mittelschrift', monospace;
+  font-weight: 400;
+  color: var(--main-color, #FFF8EC);
+}
+
+.rank-detail {
+  box-sizing: border-box;
+  flex-basis: 20px;
+  width: 113px;
+  height: 20px;
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  padding: 0px;
+  gap: 4px;
+}
+
+.detail-text {
+  box-sizing: border-box;
+  min-width: 60px;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  color: var(--main-color, #FFF8EC);
+}
+
+.detail-number {
+  box-sizing: border-box;
+  min-width: 51px;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: 'Alte DIN 1451 Mittelschrift', monospace;
+  font-weight: 400;
+  color: var(--main-color, #FFF8EC);
+}
+
+.bonus-info {
+  box-sizing: border-box;
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 189px;
+  height: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0px;
+}
+
+.bonus-text {
+  box-sizing: border-box;
+  flex-basis: 24px;
+  width: 92px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 6px;
+}
+
+.bonus-symbol {
+  box-sizing: border-box;
+  min-width: 10px;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 500;
+  color: var(--highlight-color, #FFDB4D);
+}
+
+.bonus-percentage {
+  box-sizing: border-box;
+  min-width: 24px;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Alte DIN 1451 Mittelschrift', monospace;
+  font-weight: 400;
+  color: var(--highlight-color, #FFDB4D);
+}
+
+.bonus-status {
+  box-sizing: border-box;
+  flex-basis: 54px;
+  width: 54px;
+  height: 24px;
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  padding: 0px;
+  gap: 2px;
+}
+
+.status-text {
+  box-sizing: border-box;
+  min-width: 42px;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 500;
+  color: var(--main-color, #FFF8EC);
+}
+
+.arrow-icon {
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-basis: 10px;
+  width: 10px;
+  height: 10px;
+}
+
+.bonus-detail {
+  box-sizing: border-box;
+  flex-basis: 20px;
+  width: 189px;
+  height: 20px;
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px;
+  gap: 2px;
+}
+
+.bonus-detail-text {
+  box-sizing: border-box;
+  min-width: 48px;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  color: var(--main-color, #FFF8EC);
+}
+
+.bonus-detail-number {
+  box-sizing: border-box;
+  min-width: 87px;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: 'Alte DIN 1451 Mittelschrift', monospace;
+  font-weight: 400;
+  color: var(--main-color, #FFF8EC);
+}
+
+.battle-section {
+  box-sizing: border-box;
+  flex-basis: 116px;
+  width: 382px;
+  height: 116px;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+}
+
+.battle-container {
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-basis: 116px;
+  width: 382px;
+  height: 116px;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: center;
+  padding: 0px;
+  gap: 12px;
+}
+
+.battle-title-container {
+  box-sizing: border-box;
+  flex-basis: 20px;
+  width: 382px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 12px;
+}
+
+.battle-title-content {
+  box-sizing: border-box;
+  flex-basis: 146px;
+  width: 146px;
+  height: 20px;
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  padding: 0px;
+  gap: 4px;
+}
+
+.battle-title {
+  box-sizing: border-box;
+  min-width: 98px;
+  align-items: center;
+  vertical-align: middle;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: 'HYYakuHei', sans-serif;
+  font-weight: 900;
+  background: linear-gradient(85.02deg, #ffefb8 45.26%, #fed0a5 91.48%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--title-text, transparent);
+}
+
+.battle-timer {
+  box-sizing: border-box;
+  flex-basis: 44px;
+  width: 44px;
+  height: 20px;
+  border-radius: 10px;
+  background: #FFEEB8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 0px;
+  gap: 2px;
+}
+
+.timer-text {
+  box-sizing: border-box;
+  min-width: 33px;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 500;
+  color: var(--partbg-color, #FF4F52);
+}
+
+.battle-hint {
+  box-sizing: border-box;
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 212px;
+  height: 18px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px;
+  gap: 2px;
+}
+
+.hint-text {
+  box-sizing: border-box;
+  min-width: 115px;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  color: var(--main-color, #FFF8EC);
+}
+
+.info-icon {
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-basis: 10px;
+  width: 10px;
+  height: 10px;
+}
+
+.battle-content {
+  box-sizing: border-box;
+  flex-basis: 84px;
+  width: 358px;
+  height: 84px;
+  border-radius: 8px;
+  background: #FFFFFF33;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0px 12px 16px;
+  gap: 10px;
+  position: relative;
+}
+
+.battle-players {
+  box-sizing: border-box;
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 334px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0px;
+  gap: 8px;
+}
+
+.player-avatar {
+  box-sizing: border-box;
+  flex-basis: 36px;
+  width: 36px;
+  height: 36px;
+  position: relative;
+}
+
+.player-avatar-bg {
+  box-sizing: border-box;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 36px;
+  height: 36px;
+}
+
+.player-avatar-main {
+  box-sizing: border-box;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 36px;
+  height: 36px;
+  z-index: 2;
+}
+
+.player-live-indicator {
+  box-sizing: border-box;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 12px;
+  height: 12px;
+  z-index: 5;
+}
+
+.player-live-bg {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 12px;
+  height: 12px;
+}
+
+.player-live-icon {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 2.8787598609924316px;
+  left: 3.01904296875px;
+  width: 6px;
+  height: 6px;
+  z-index: 2;
+}
+
+.battle-progress {
+  box-sizing: border-box;
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 246px;
+  height: 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+}
+
+.player-names {
+  box-sizing: border-box;
+  flex-basis: 16px;
+  width: 246px;
+  height: 16px;
+  align-self: stretch;
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  padding: 0px;
+  gap: 4px;
+}
+
+.left-player-name {
+  box-sizing: border-box;
+  min-width: 91px;
+  width: 91px;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  color: var(--main-color, #FFF8EC);
+}
+
+.right-player-name {
+  box-sizing: border-box;
+  flex-shrink: 1;
+  min-width: 151px;
+  width: 151px;
+  text-align: right;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  color: var(--main-color, #FFF8EC);
+}
+
+.progress-bar-container {
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-basis: 14px;
+  width: 246px;
+  height: 14px;
+  align-self: stretch;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  padding: 0px;
+  position: relative;
+}
+
+.progress-bg-right {
+  box-sizing: border-box;
+  flex-basis: 14px;
+  width: 358px;
+  height: 14px;
+  position: absolute;
+  top: 0px;
+  right: -112px;
+  border-radius: 8px;
+  background: var(--pk-pkrogress-right-color, #1E93FF);
+  display: flex;
+  justify-content: normal;
+}
+
+.progress-bg-left {
+  box-sizing: border-box;
+  flex-basis: 14px;
+  width: 246px;
+  height: 14px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+}
+
+.progress-scores {
+  box-sizing: border-box;
+  flex-basis: 14px;
+  width: 246px;
+  height: 14px;
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px;
+  z-index: 3;
+}
+
+.left-score, .right-score {
+  box-sizing: border-box;
+  flex-shrink: 1;
+  min-width: 113px;
+  width: 113px;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  color: var(--white-color, #FFFFFF);
+}
+
+.right-score {
+  text-align: right;
+}
+
+.battle-info-overlay {
+  box-sizing: border-box;
+  flex-basis: 186px;
+  width: 186px;
+  height: 20px;
+  position: absolute;
+  top: 0px;
+  left: 86px;
+}
+
+.battle-info-bg {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 186px;
+  height: 20px;
+}
+
+.battle-info-text {
+  box-sizing: border-box;
+  height: 14px;
+  position: absolute;
+  top: 3px;
+  left: 7px;
+  width: 172px;
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  padding: 2px 0px;
+  gap: 2px;
+}
+
+.battle-info-text span {
+  box-sizing: border-box;
+  min-width: 172px;
+  vertical-align: top;
+  font-size: 10px;
+  line-height: 14px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  color: var(--main-color, #FFF8EC);
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .App {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .ranking-card {
+    width: 100%;
+    max-width: 382px;
+    height: auto;
+    min-height: 208px;
+  }
+  
+  .background-overlay,
+  .top-animated-bg,
+  .card-content,
+  .user-info-section,
+  .user-info-container,
+  .battle-section,
+  .battle-container,
+  .battle-title-container,
+  .battle-content {
+    width: 100%;
   }
 }
