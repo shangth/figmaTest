@@ -1,38 +1,624 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-container {
+  width: 414px;
+  height: 849px;
+  margin: 0 auto;
+  background: #A575F4;
+  border-radius: 16px 16px 0px 0px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Header Section */
+.header-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 414px;
+  height: 220px;
+  border-radius: 16px 16px 0px 0px;
+  background: #FFFFFF;
+  overflow: hidden;
+}
+
+.header-background {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 414px;
+  height: 250px;
+}
+
+.header-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 414px;
+  height: 250px;
+  background: #FFFFFF;
+  overflow: hidden;
+}
+
+.background-images {
+  position: absolute;
+  bottom: -42.5584716796875px;
+  left: -48.1748046875px;
+  width: 510px;
+  height: 309px;
+}
+
+.bg-image {
+  position: absolute;
+}
+
+.main-bg {
+  top: 0px;
+  right: 48.17431640625px;
+  width: 414px;
+  height: 267px;
+  z-index: 3;
+}
+
+.left-bottom {
+  bottom: 2px;
+  left: 0px;
+  width: 128px;
+  height: 147px;
+  z-index: 4;
+}
+
+.left-bottom-overlay {
+  bottom: 2px;
+  left: 0px;
+  width: 128px;
+  height: 147px;
+  z-index: 5;
+}
+
+.right-bottom {
+  bottom: 0px;
+  right: 0px;
+  width: 128px;
+  height: 147px;
+  z-index: 6;
+}
+
+.right-bottom-overlay {
+  bottom: 0px;
+  right: 0px;
+  width: 128px;
+  height: 147px;
+  z-index: 7;
+}
+
+.gradient-overlay {
+  position: absolute;
+  bottom: 42.5584716796875px;
+  right: 48.17431640625px;
+  width: 414px;
+  height: 61px;
+  background: linear-gradient(180deg, #ffc4f200 0.63%, #ffc4f2 44.09%);
+  z-index: 1;
+}
+
+.title-text {
+  position: absolute;
+  top: 68px;
+  left: 91.55828839540482px;
   text-align: center;
+  font-size: 46px;
+  line-height: normal;
+  font-family: 'HYChangMeiHeiJ', 'PingFang SC', sans-serif;
+  font-weight: 400;
+  letter-spacing: -10px;
+  color: #B270F4;
+  z-index: 2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title-text-gradient {
+  position: absolute;
+  top: 68px;
+  left: 91.55828839540482px;
+  text-align: center;
+  font-size: 46px;
+  line-height: normal;
+  font-family: 'HYChangMeiHeiJ', 'PingFang SC', sans-serif;
+  font-weight: 400;
+  letter-spacing: -10px;
+  background: linear-gradient(179.09deg, #d7cdff 0.77%, #fefcff 51.33%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 3;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header-gradient-bottom {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 414px;
+  height: 65px;
+  background: linear-gradient(0deg, #a575f4 32.69%, #a575f400 100%);
+  z-index: 2;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Cards */
+.card {
+  position: absolute;
+  width: 382px;
+  left: 16px;
+  border-radius: 16px;
+  background: #FFFFFF;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 84px 0px 20px;
+  gap: 10px;
+}
+
+.first-card {
+  top: 180px;
+  height: 237px;
+  z-index: 2;
+}
+
+.second-card {
+  bottom: 32px;
+  height: 380px;
+  z-index: 3;
+}
+
+.card-header {
+  position: absolute;
+  top: 20px;
+  left: 95px;
+  width: 192px;
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-bg {
+  position: absolute;
+  bottom: -94px;
+  left: -95px;
+  width: 382px;
+  height: 162px;
+  border-radius: 16px 16px 0px 0px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.card-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-title-section {
+  width: 192px;
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  z-index: 3;
+}
+
+.card-title-row {
+  width: 172px;
+  height: 28px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 2px;
 }
 
-.App-link {
-  color: #61dafb;
+.title-icon {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.title-icon.rotated {
+  transform: rotate(180deg);
+}
+
+.heart-icon {
+  position: absolute;
+  bottom: 6.012558500148316px;
+  right: 3.3310521516480094px;
+  width: 10px;
+  height: 8px;
+  z-index: 3;
+}
+
+.title-icon.rotated .heart-icon {
+  bottom: 6.012558500148316px;
+  left: 3.3310521516480094px;
+  right: auto;
+}
+
+.heart-icon-inner {
+  position: absolute;
+  top: 5.2995299960171px;
+  left: 2.24461484598487px;
+  width: 6px;
+  height: 5px;
+  z-index: 5;
+}
+
+.title-icon.rotated .heart-icon-inner {
+  top: 5.2995299960171px;
+  right: 2.24461484598487px;
+  left: auto;
+}
+
+.card-title {
+  min-width: 120px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: 'FZRuiZhengHeiS-EB-GB', 'PingFang SC', sans-serif;
+  font-weight: 400;
+  background: linear-gradient(-88.94deg, #f577d2 -0.93%, #7862fd 97.52%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-subtitle {
+  width: 204px;
+  height: 18px;
+  opacity: 0.6;
+  text-align: center;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  color: #32296B;
+}
+
+/* Rewards Section */
+.rewards-section {
+  width: 358px;
+  height: 133px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 8px;
+}
+
+.reward-item {
+  width: 100px;
+  height: 133px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 0px;
+  gap: 8px;
+}
+
+.reward-icon {
+  width: 66px;
+  height: 66px;
+}
+
+.reward-text {
+  width: 84px;
+  height: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.reward-title {
+  min-width: 64px;
+  text-align: center;
+  font-size: 12px;
+  line-height: normal;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 500;
+  color: #3F2264;
+}
+
+.reward-desc {
+  opacity: 0.6;
+  min-width: 84px;
+  text-align: center;
+  font-size: 10px;
+  line-height: normal;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  color: #3F2264;
+}
+
+/* Tasks Section */
+.tasks-section {
+  width: 358px;
+  height: 276px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-bar {
+  width: 358px;
+  height: 32px;
+  border-radius: 8px;
+  background: #CCA5FF1A;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 16px;
+}
+
+.info-left {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.info-text {
+  opacity: 0.6;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  color: #3F2264;
+}
+
+.info-highlight {
+  font-size: 12px;
+  line-height: 18px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  color: #FF5477;
+}
+
+.info-right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.arrow-icon {
+  width: 10px;
+  height: 10px;
+}
+
+.task-item {
+  width: 358px;
+  height: 112px;
+  border-radius: 8px;
+  background: #CCA5FF1A;
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  gap: 10px;
+}
+
+.task-item.completed {
+  opacity: 0.6;
+}
+
+.task-icon {
+  width: 72px;
+  height: 92px;
+  border-radius: 6px;
+  background: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+.task-item.completed .task-icon {
+  opacity: 0.6;
+}
+
+.task-reward-icon {
+  position: absolute;
+  top: 10px;
+  left: 9.5px;
+  width: 52px;
+  height: 52px;
+}
+
+.task-icon-text {
+  position: absolute;
+  bottom: 11px;
+  left: 4px;
+  width: 64px;
+  text-align: center;
+  font-size: 10px;
+  line-height: 15px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  color: #642241;
+  opacity: 0.6;
+}
+
+.task-content {
+  flex: 1;
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.task-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+}
+
+.task-item.completed .task-info {
+  opacity: 0.6;
+}
+
+.task-title {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 500;
+  color: #3F2264;
+}
+
+.task-desc {
+  font-size: 12px;
+  line-height: 18px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  color: #FF5477;
+}
+
+.task-button {
+  width: 82px;
+  height: 36px;
+  border-radius: 30px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.completed-button {
+  border: 1px solid #32296B;
+  background: transparent;
+  color: #3F2264;
+  opacity: 0.5;
+}
+
+.primary-button {
+  background: #FF344C;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+.primary-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/efda862c-6290-4b1b-9013-34de32919f23');
+  background-size: cover;
+  z-index: 1;
+}
+
+.primary-button::after {
+  content: '';
+  position: absolute;
+  bottom: 1.5px;
+  left: 2.5px;
+  width: 77px;
+  height: 32px;
+  border-radius: 100px;
+  background: linear-gradient(197.16deg, #ffc6e880 4%, #fff3 33.18%, #fff0 55.1%);
+  opacity: 0.8;
+  z-index: 2;
+}
+
+.primary-button span {
+  position: relative;
+  z-index: 3;
+}
+
+.progress-bar {
+  width: 252px;
+  height: 20px;
+  border-radius: 16px;
+  background: #CCA5FF1A;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.task-item.completed .progress-bar {
+  opacity: 0.6;
+}
+
+.progress-fill {
+  height: 20px;
+  border-radius: 16px;
+  background: linear-gradient(90deg, #e0b9ff 7.75%, #c293ff 50%);
+  position: relative;
+}
+
+.completed-progress {
+  width: 252px;
+}
+
+.partial-progress {
+  width: 148px;
+}
+
+.progress-text {
+  position: absolute;
+  top: 1px;
+  left: 8px;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  color: #3F2264;
+}
+
+/* Bottom Text */
+.bottom-text {
+  position: absolute;
+  top: 100px;
+  left: 70px;
+  width: 274px;
+  height: 28px;
+  z-index: 4;
+}
+
+.bottom-text-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 274px;
+  height: 28px;
+  background: linear-gradient(270deg, #a575f400 0%, #a575f499 9.61%, #a575f4 50%, #a575f499 90.8%, #a575f400 100%);
+}
+
+.bottom-text-content {
+  position: absolute;
+  top: 5px;
+  left: 59px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+/* Responsive adjustments */
+@media (max-width: 414px) {
+  .app-container {
+    width: 100vw;
+    max-width: 414px;
   }
 }
