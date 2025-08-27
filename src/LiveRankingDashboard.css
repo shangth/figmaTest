@@ -1,0 +1,574 @@
+/* CSS变量定义 */
+:root {
+  --substrate-color: rgba(64, 145, 255, 0.1);
+  --main-color: #001A4F;
+  --highlight-color: #FF5477;
+  --secondary-main-color: #32296B;
+}
+
+.live-ranking-dashboard {
+  box-sizing: border-box;
+  width: 414px;
+  height: 868px;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  padding: 10px;
+  gap: 67px;
+}
+
+/* 小卡片容器 */
+.small-cards-container {
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  flex-basis: 158px;
+  width: 358px;
+  height: 158px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: normal;
+  padding: 0px;
+  gap: 10px;
+}
+
+/* 小卡片样式 */
+.small-card {
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-basis: 174px;
+  width: 174px;
+  height: 74px;
+  border-radius: 8px;
+  background: var(--substrate-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12px;
+  gap: 4px;
+}
+
+.card-content {
+  box-sizing: border-box;
+  flex-basis: 40px;
+  width: 150px;
+  height: 40px;
+  align-self: stretch;
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  padding: 0px;
+  gap: 4px;
+}
+
+.card-info {
+  flex-grow: 1;
+  flex-shrink: 1;
+  box-sizing: border-box;
+  width: 106px;
+  height: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  padding: 0px;
+  gap: 2px;
+}
+
+.card-title {
+  box-sizing: border-box;
+  min-width: 42px;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: normal;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 500;
+  color: var(--main-color);
+}
+
+.card-stats {
+  box-sizing: border-box;
+  flex-basis: 14px;
+  width: 61px;
+  height: 14px;
+  display: flex;
+  justify-content: normal;
+  padding: 0px;
+}
+
+.current-value {
+  box-sizing: border-box;
+  min-width: 24px;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: normal;
+  font-family: 'Alte DIN 1451 Mittelschrift', monospace;
+  font-weight: 400;
+  color: var(--highlight-color);
+}
+
+.total-value {
+  box-sizing: border-box;
+  opacity: 0.6;
+  min-width: 37px;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: normal;
+  font-family: 'Alte DIN 1451 Mittelschrift', monospace;
+  font-weight: 400;
+  color: var(--main-color);
+}
+
+.card-icon {
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-basis: 40px;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.progress-bar {
+  box-sizing: border-box;
+  opacity: 0.7;
+  flex-basis: 6px;
+  width: 150px;
+  height: 6px;
+  align-self: stretch;
+  border-radius: 12px;
+  background: #C8DFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 32px 0px 0px;
+}
+
+.progress-fill {
+  box-sizing: border-box;
+  flex-basis: 6px;
+  width: 118px;
+  height: 6px;
+  align-self: stretch;
+  border-radius: 12px;
+  background: linear-gradient(88.24deg, #4b6eff 1.42%, #8c88ff 100.84%);
+}
+
+/* 大卡片容器 */
+.large-cards-container {
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  flex-basis: 236px;
+  width: 358px;
+  height: 236px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: normal;
+  padding: 0px;
+  gap: 10px;
+}
+
+/* 大卡片样式 */
+.large-card {
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-basis: 358px;
+  width: 358px;
+  height: 72px;
+  border-radius: 8px;
+  background: var(--substrate-color);
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  padding: 16px;
+  gap: 16px;
+}
+
+.large-card-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.large-card-info {
+  flex-grow: 1;
+  flex-shrink: 1;
+  box-sizing: border-box;
+  width: 270px;
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px;
+  gap: 4px;
+}
+
+.large-card-header {
+  box-sizing: border-box;
+  flex-basis: 22px;
+  width: 270px;
+  height: 22px;
+  align-self: stretch;
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  padding: 0px;
+  gap: 2px;
+}
+
+.large-card-title {
+  flex-shrink: 1;
+  box-sizing: border-box;
+  min-width: 204px;
+  width: 204px;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: normal;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 500;
+  color: var(--main-color);
+}
+
+.large-card-stats {
+  box-sizing: border-box;
+  flex-basis: 64px;
+  width: 64px;
+  height: 16px;
+  display: flex;
+  justify-content: normal;
+  padding: 0px;
+}
+
+.large-current-value {
+  box-sizing: border-box;
+  min-width: 27px;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: normal;
+  font-family: 'Alte DIN 1451 Mittelschrift', monospace;
+  font-weight: 400;
+  color: var(--highlight-color);
+}
+
+.large-total-value {
+  box-sizing: border-box;
+  opacity: 0.6;
+  min-width: 37px;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: normal;
+  font-family: 'Alte DIN 1451 Mittelschrift', monospace;
+  font-weight: 400;
+  color: var(--main-color);
+}
+
+.large-progress-bar {
+  box-sizing: border-box;
+  opacity: 0.7;
+  flex-basis: 6px;
+  width: 270px;
+  height: 6px;
+  align-self: stretch;
+  border-radius: 12px;
+  background: #C8DFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 32px 0px 0px;
+}
+
+.large-progress-fill {
+  box-sizing: border-box;
+  flex-basis: 6px;
+  width: 238px;
+  height: 6px;
+  align-self: stretch;
+  border-radius: 12px;
+  background: linear-gradient(88.24deg, #4b6eff 1.42%, #8c88ff 100.84%);
+}
+
+.large-card-icon {
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-basis: 40px;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.large-card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 用户排行榜容器 */
+.user-rankings-container {
+  box-sizing: border-box;
+  flex-basis: 320px;
+  width: 394px;
+  height: 320px;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: center;
+  padding: 0px;
+}
+
+/* 用户排行榜项目 */
+.user-ranking-item {
+  box-sizing: border-box;
+  flex-basis: 80px;
+  width: 414px;
+  height: 80px;
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  padding: 4px 20px 4px 14px;
+}
+
+.user-info {
+  flex-grow: 1;
+  flex-shrink: 1;
+  box-sizing: border-box;
+  width: 232px;
+  height: 72px;
+  align-self: stretch;
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  padding: 0px;
+  gap: 6px;
+}
+
+.avatar-container {
+  box-sizing: border-box;
+  min-width: 72px;
+  flex-basis: 72px;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+}
+
+.avatar-wrapper {
+  box-sizing: border-box;
+  flex-basis: 60px;
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+
+.avatar {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar-frame {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 60px;
+  height: 60px;
+  z-index: 2;
+}
+
+.live-badge {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0px;
+  left: 9px;
+  width: 42px;
+  height: 13px;
+  z-index: 4;
+}
+
+.live-bg {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0px;
+  right: 0.4796104431152344px;
+  width: 41px;
+  height: 13px;
+}
+
+.live-text {
+  box-sizing: border-box;
+  min-width: 21px;
+  text-align: center;
+  vertical-align: top;
+  font-size: 7px;
+  line-height: 9px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  color: #FFEBCC;
+  position: absolute;
+  top: 1.5px;
+  left: 10px;
+  width: 22px;
+  height: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.follow-icon {
+  box-sizing: border-box;
+  overflow: hidden;
+  position: absolute;
+  bottom: -6px;
+  left: 22px;
+  width: 16px;
+  height: 16px;
+  z-index: 7;
+}
+
+.follow-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.user-details {
+  flex-grow: 1;
+  flex-shrink: 1;
+  box-sizing: border-box;
+  width: 154px;
+  height: 46px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px;
+  gap: 4px;
+}
+
+.nickname {
+  box-sizing: border-box;
+  flex-basis: 24px;
+  width: 80px;
+  height: 24px;
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  padding: 0px;
+  gap: 4px;
+  min-width: 80px;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 500;
+  color: var(--secondary-main-color);
+}
+
+.fire-value {
+  box-sizing: border-box;
+  flex-basis: 18px;
+  width: 154px;
+  height: 18px;
+  align-self: stretch;
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  padding: 0px;
+}
+
+.fire-label {
+  box-sizing: border-box;
+  opacity: 0.6;
+  min-width: 48px;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  color: var(--secondary-main-color);
+}
+
+.fire-number {
+  box-sizing: border-box;
+  min-width: 39px;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 14px;
+  font-family: 'Alte DIN 1451 Mittelschrift', monospace;
+  font-weight: 400;
+  color: var(--highlight-color);
+}
+
+.user-stats {
+  box-sizing: border-box;
+  flex-basis: 148px;
+  width: 148px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 0px 0px 12px;
+  gap: 8px;
+}
+
+.stat-item {
+  box-sizing: border-box;
+  max-width: 52px;
+  min-width: 40px;
+  flex-basis: 40px;
+  width: 40px;
+  height: 46px;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: center;
+  padding: 0px;
+  gap: 4px;
+}
+
+.stat-number {
+  box-sizing: border-box;
+  max-width: 56px;
+  flex-basis: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0px;
+  flex-shrink: 1;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 12px;
+  line-height: 24px;
+  font-family: 'Alte DIN 1451 Mittelschrift', monospace;
+  font-weight: 400;
+  color: var(--highlight-color);
+}
+
+.stat-label {
+  box-sizing: border-box;
+  opacity: 0.6;
+  min-width: 40px;
+  text-align: center;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 400;
+  color: var(--secondary-main-color);
+}
