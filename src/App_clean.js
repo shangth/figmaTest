@@ -8,6 +8,7 @@ function App() {
 
   return (
     <div className="app-container">
+      {/* Main Container */}
       <div className="main-container">
         {/* Hero Section */}
         <div className="hero-section">
@@ -41,6 +42,7 @@ function App() {
 
         {/* Rewards Grid */}
         <div className="rewards-grid">
+          {/* Reward Item 1 */}
           <div className="reward-item active">
             <img 
               src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c9add126-2437-455a-8783-9011682d1078" 
@@ -63,6 +65,7 @@ function App() {
             </div>
           </div>
 
+          {/* Reward Item 2 */}
           <div className="reward-item active">
             <img 
               src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/8fd8b8ce-1ba2-4daa-8b2c-d032469c411e" 
@@ -85,6 +88,7 @@ function App() {
             </div>
           </div>
 
+          {/* Reward Item 3 */}
           <div className="reward-item inactive">
             <img 
               src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/698f0d2b-422a-4a73-86d4-4df85885f82a" 
@@ -107,6 +111,7 @@ function App() {
             </div>
           </div>
 
+          {/* Reward Item 4 */}
           <div className="reward-item inactive">
             <img 
               src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/e415efe3-2d18-4dce-9790-c40e24409dfc" 

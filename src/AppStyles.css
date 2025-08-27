@@ -1,0 +1,369 @@
+/* Bottom Section */
+.bottom-section {
+  box-sizing: border-box;
+  flex-basis: 313px;
+  width: 414px;
+  height: 313px;
+  position: absolute;
+  bottom: 38px;
+  left: 0px;
+  border-radius: 16px;
+  background: var(--bg-color, #0C0C16);
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  z-index: 9;
+}
+
+/* User Info */
+.user-info {
+  box-sizing: border-box;
+  flex-basis: 59px;
+  width: 414px;
+  height: 59px;
+  align-self: stretch;
+  position: relative;
+}
+
+.user-info-bg {
+  box-sizing: border-box;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 414px;
+  height: 59px;
+}
+
+.user-bg-1 {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 414px;
+  height: 55px;
+}
+
+.user-bg-2 {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 414px;
+  height: 55px;
+  z-index: 2;
+}
+
+.user-content {
+  box-sizing: border-box;
+  width: 190px;
+  height: 42px;
+  position: absolute;
+  bottom: 0px;
+  left: 12px;
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  z-index: 4;
+}
+
+.user-avatar {
+  box-sizing: border-box;
+  flex-basis: 42px;
+  width: 42px;
+  height: 42px;
+}
+
+.user-details {
+  box-sizing: border-box;
+  flex-basis: 138px;
+  width: 138px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  padding: 0px;
+  gap: 4px;
+}
+
+.user-stars {
+  box-sizing: border-box;
+  flex-basis: 16px;
+  width: 138px;
+  height: 16px;
+  align-self: stretch;
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  padding: 0px;
+}
+
+.stars-text {
+  box-sizing: border-box;
+  min-width: 96px;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: 'PingFang SC';
+  font-weight: 600;
+  background: linear-gradient(89.98deg, #fff 0.03%, #ffc4a3 95.69%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--nav-active-text, undefined);
+}
+
+.user-star {
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-basis: 12px;
+  width: 12px;
+  height: 12px;
+}
+
+.user-current {
+  box-sizing: border-box;
+  flex-basis: 20px;
+  width: 138px;
+  height: 20px;
+  position: relative;
+}
+
+.current-label {
+  box-sizing: border-box;
+  opacity: 0.8;
+  min-width: 52px;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 14px;
+  font-family: 'PingFang SC';
+  font-weight: 400;
+  color: #FFE4D5;
+}
+
+.current-gold {
+  box-sizing: border-box;
+  flex-basis: 38px;
+  width: 38px;
+  height: 20px;
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  padding: 0px;
+  gap: 0.73px;
+  position: absolute;
+  top: 0px;
+  left: 56px;
+}
+
+.gold-number {
+  box-sizing: border-box;
+  min-width: 23px;
+  text-align: center;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: normal;
+  font-family: 'PingFang SC';
+  font-weight: 500;
+  color: var(--main-color, #FFDFBF);
+}
+
+.gold-star {
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-basis: 14px;
+  width: 14px;
+  height: 14px;
+}
+
+.current-purple {
+  box-sizing: border-box;
+  flex-basis: 40px;
+  width: 40px;
+  height: 20px;
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  padding: 0px;
+  gap: 1.45px;
+  position: absolute;
+  top: 0px;
+  left: 98px;
+}
+
+.purple-number {
+  box-sizing: border-box;
+  min-width: 23px;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: normal;
+  font-family: 'PingFang SC';
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.purple-star {
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-basis: 16px;
+  width: 16px;
+  height: 16px;
+}
+
+/* Action Buttons */
+.action-buttons {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 5px;
+  right: 12px;
+  width: 90px;
+  height: 42px;
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  padding: 0px;
+  gap: 6px;
+  z-index: 2;
+}
+
+.action-btn {
+  box-sizing: border-box;
+  flex-basis: 42px;
+  width: 42px;
+  height: 42px;
+  position: relative;
+}
+
+.action-icon {
+  box-sizing: border-box;
+  position: absolute;
+  top: 1px;
+  left: 5px;
+  width: 32px;
+  height: 32px;
+}
+
+.action-overlay {
+  box-sizing: border-box;
+  position: absolute;
+  top: 1px;
+  left: 5px;
+  width: 32px;
+  height: 32px;
+  z-index: 2;
+}
+
+.action-top {
+  box-sizing: border-box;
+  position: absolute;
+  top: 1px;
+  left: 5px;
+  width: 32px;
+  height: 32px;
+  z-index: 3;
+}
+
+.action-center {
+  box-sizing: border-box;
+  position: absolute;
+  top: -0.5px;
+  left: 7px;
+  width: 27px;
+  height: 31px;
+  z-index: 4;
+}
+
+.action-bottom {
+  box-sizing: border-box;
+  overflow: hidden;
+  position: absolute;
+  bottom: 2px;
+  left: 2px;
+  width: 38px;
+  height: 16px;
+  border-radius: 20px;
+  z-index: 5;
+}
+
+.action-text {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 4px;
+  left: 5px;
+  text-align: center;
+  vertical-align: top;
+  font-size: 8px;
+  line-height: normal;
+  font-family: 'PingFang SC';
+  font-weight: 600;
+  color: var(--main-color, #FFDFBF);
+  z-index: 6;
+}
+
+/* Progress Section */
+.progress-section {
+  box-sizing: border-box;
+  flex-basis: 170px;
+  width: 390px;
+  height: 170px;
+  border-radius: 8px;
+  background: var(--partbg-color, #141522);
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  padding: 8px 12px 12px;
+  gap: 4px;
+  position: relative;
+}
+
+.progress-content {
+  box-sizing: border-box;
+  flex-basis: 88px;
+  width: 336px;
+  height: 88px;
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+}
+
+.progress-circle {
+  box-sizing: border-box;
+  flex-basis: 88px;
+  width: 88px;
+  height: 88px;
+  position: relative;
+}
+
+.progress-circle-bg {
+  box-sizing: border-box;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 76px;
+  height: 76px;
+}
+
+.progress-percentage {
+  box-sizing: border-box;
+  position: absolute;
+  top: 35px;
+  left: 22px;
+  width: 44px;
+  text-align: center;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: normal;
+  font-family: 'Alibaba PuHuiTi 2.0';
+  font-weight: 400;
+  color: #764C2D;
+  -webkit-text-stroke-width: 0.43px;
+  -webkit-text-stroke-color: #FEF8DB;
+  z-index: 2;
+}
