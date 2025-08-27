@@ -1,38 +1,220 @@
-.App {
-  text-align: center;
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  padding: 20px;
+}
+
+/* Main container */
+.job-card-container {
+  position: relative;
+  width: 334px;
+  height: 580px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Background images */
+.bg-image-1 {
+  position: absolute;
+  top: -120px;
+  right: -37px;
+  width: 404px;
+  height: 720px;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.bg-image-2 {
+  position: absolute;
+  bottom: -186px;
+  right: -173px;
+  width: 650px;
+  height: 866px;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+/* Gradient overlays */
+.gradient-top {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 334px;
+  height: 180px;
+  background: linear-gradient(180deg, #475463 0%, #7b8ea580 39.19%, #dee2e600 51.56%);
+  z-index: 3;
+  box-sizing: border-box;
+}
+
+.gradient-bottom {
+  position: absolute;
+  bottom: -13.999985400394962px;
+  left: -0.00001854065885709133px;
+  width: 334px;
+  height: 274px;
+  background: linear-gradient(180deg, #596572 0%, #647282 21%, #6f7a8600 50%);
+  transform: rotate(-180deg);
+  z-index: 4;
+  box-sizing: border-box;
+}
+
+/* Header text */
+.header-text {
+  position: absolute;
+  top: 0px;
+  left: 60px;
+  font-size: 72px;
+  line-height: 121.01px;
+  font-family: 'Alibaba PuHuiTi 2.0', 'PingFang SC', sans-serif;
+  font-weight: 400;
+  color: #FFFFFF;
+  z-index: 7;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+/* Subtitle text */
+.subtitle-text {
+  position: absolute;
+  top: 109px;
+  left: 59px;
+  font-size: 24px;
+  line-height: 32px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  z-index: 6;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+/* Content card */
+.content-card {
+  position: absolute;
+  bottom: 19px;
+  left: 21px;
+  width: 292px;
+  height: 326px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #ffffffe5 0%, #edf5ff 100%);
+  z-index: 8;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Salary section */
+.salary-section {
+  position: absolute;
+  top: 20px;
+  left: 33.5px;
+  width: 225px;
+  height: 66px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0px;
+  z-index: 1;
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+.salary-amount {
+  min-width: 225px;
+  font-size: 40px;
+  line-height: 42px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #FE3666;
+  vertical-align: top;
+  z-index: 1;
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.salary-unit {
+  min-width: 42px;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #FE3666;
+  vertical-align: top;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+/* Job details section */
+.job-details {
+  position: absolute;
+  bottom: 24px;
+  left: 22.5px;
+  width: 247px;
+  height: 204px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0px;
+  gap: 14px;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.job-description,
+.job-benefits,
+.job-location {
+  font-size: 16px;
+  line-height: normal;
+  font-family: 'PingFang SC', sans-serif;
+  font-weight: 600;
+  color: #222222;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+.job-description {
+  min-width: 247px;
+  z-index: 1;
+}
+
+.job-benefits {
+  min-width: 247px;
+  z-index: 2;
+}
+
+.job-location {
+  min-width: 192px;
+  z-index: 3;
+}
+
+/* Responsive design */
+@media (max-width: 375px) {
+  .job-card-container {
+    width: 100%;
+    max-width: 334px;
+    height: auto;
+    min-height: 580px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 320px) {
+  body {
+    padding: 10px;
+  }
+  
+  .job-card-container {
+    transform: scale(0.95);
+    transform-origin: center;
   }
 }
