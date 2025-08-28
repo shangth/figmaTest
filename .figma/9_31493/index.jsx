@@ -1,7 +1,8 @@
 import React from 'react';
-import styles from './App.module.scss';
 
-function App() {
+import styles from './index.module.scss';
+
+const Component = () => {
   return (
     <div className={styles.frame2147224469}>
       <div className={styles.frame15}>
@@ -14,7 +15,7 @@ function App() {
                 <p className={styles.a120000}>/120000</p>
               </div>
             </div>
-            <img src="../.figma/image/meuu1jwq-z97dfuu.svg" className={styles.frame3} alt="热度值图标" />
+            <img src="../image/meuu1jwq-z97dfuu.svg" className={styles.frame3} />
           </div>
           <div className={styles.frame4}>
             <div className={styles.rectangle596} />
@@ -29,7 +30,7 @@ function App() {
                 <p className={styles.a120000}>/5次</p>
               </div>
             </div>
-            <img src="../.figma/image/meuu1jwq-22xkzb3.svg" className={styles.frame3} alt="PK图标" />
+            <img src="../image/meuu1jwq-22xkzb3.svg" className={styles.frame3} />
           </div>
           <div className={styles.frame4}>
             <div className={styles.rectangle596} />
@@ -47,14 +48,12 @@ function App() {
             <div className={styles.instance}>
               <div className={styles.frame10}>
                 <img
-                  src="../.figma/image/meuu1jwq-4dwoaqn.svg"
+                  src="../image/meuu1jwq-4dwoaqn.svg"
                   className={styles.frame9}
-                  alt="评论图标"
                 />
                 <img
-                  src="../.figma/image/meuu1jwq-yxfmdqw.svg"
+                  src="../image/meuu1jwq-yxfmdqw.svg"
                   className={styles.commonBaseCommentsma}
-                  alt="评论装饰"
                 />
               </div>
             </div>
@@ -72,7 +71,7 @@ function App() {
                 <p className={styles.a120000}>/5分钟</p>
               </div>
             </div>
-            <img src="../.figma/image/meuu1jwq-77jwj4s.svg" className={styles.frame3} alt="直播时长图标" />
+            <img src="../image/meuu1jwq-77jwj4s.svg" className={styles.frame3} />
           </div>
           <div className={styles.frame4}>
             <div className={styles.rectangle596} />
@@ -93,7 +92,7 @@ function App() {
               <div className={styles.rectangle5962} />
             </div>
           </div>
-          <img src="../.figma/image/meuu1jwq-hyk6d2x.svg" className={styles.frame3} alt="热度值图标" />
+          <img src="../image/meuu1jwq-hyk6d2x.svg" className={styles.frame3} />
         </div>
         <div className={styles.frame19}>
           <div className={styles.frame2036088505}>
@@ -108,7 +107,7 @@ function App() {
               <div className={styles.rectangle5962} />
             </div>
           </div>
-          <img src="../.figma/image/meuu1jwq-v5woo82.svg" className={styles.frame3} alt="PK图标" />
+          <img src="../image/meuu1jwq-v5woo82.svg" className={styles.frame3} />
         </div>
         <div className={styles.frame20}>
           <div className={styles.frame2036088505}>
@@ -125,11 +124,10 @@ function App() {
           </div>
           <div className={styles.instance}>
             <div className={styles.frame10}>
-              <img src="../.figma/image/meuu1jwq-op7gmc5.svg" className={styles.frame9} alt="评论图标" />
+              <img src="../image/meuu1jwq-op7gmc5.svg" className={styles.frame9} />
               <img
-                src="../.figma/image/meuu1jwq-uec18am.svg"
+                src="../image/meuu1jwq-uec18am.svg"
                 className={styles.commonBaseCommentsma}
-                alt="评论装饰"
               />
             </div>
           </div>
@@ -146,7 +144,7 @@ function App() {
                   </div>
                 </div>
               </div>
-              <img src="../.figma/image/meuu1jwq-qdcm0x9.svg" className={styles.frame23} alt="直播状态" />
+              <img src="../image/meuu1jwq-qdcm0x9.svg" className={styles.frame23} />
             </div>
             <div className={styles.instance4}>
               <p className={styles.text4}>这是个昵称</p>
@@ -177,7 +175,7 @@ function App() {
               <div className={styles.frame27}>
                 <div className={styles.avatar88} />
               </div>
-              <img src="../.figma/image/meuu1jwq-t1u821e.svg" className={styles.frame23} alt="用户等级" />
+              <img src="../image/meuu1jwq-t1u821e.svg" className={styles.frame23} />
             </div>
             <div className={styles.instance4}>
               <p className={styles.text4}>这是个昵称</p>
@@ -208,7 +206,7 @@ function App() {
               <div className={styles.frame29}>
                 <div className={styles.avatar88} />
               </div>
-              <img src="../.figma/image/meuu1jwq-3vlvbjo.svg" className={styles.frame23} alt="用户等级" />
+              <img src="../image/meuu1jwq-3vlvbjo.svg" className={styles.frame23} />
             </div>
             <div className={styles.instance4}>
               <p className={styles.text4}>这是个昵称</p>
@@ -239,7 +237,7 @@ function App() {
               <div className={styles.frame31}>
                 <div className={styles.avatar88} />
               </div>
-              <img src="../.figma/image/meuu1jwq-aiysvdt.svg" className={styles.frame23} alt="用户等级" />
+              <img src="../image/meuu1jwq-aiysvdt.svg" className={styles.frame23} />
             </div>
             <div className={styles.instance4}>
               <p className={styles.text4}>这是个昵称</p>
@@ -269,4 +267,4 @@ function App() {
   );
 }
 
-export default App;
+export default Component;
