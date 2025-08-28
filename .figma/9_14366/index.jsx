@@ -1,7 +1,8 @@
 import React from 'react';
+
 import styles from './index.module.scss';
 
-function App() {
+const Component = () => {
   return (
     <div className={styles.frame25}>
       <div className={styles.autoWrapper2}>
@@ -12,7 +13,7 @@ function App() {
                 <div className={styles.frame} />
                 <div className={styles.slice} />
                 <img
-                  src="./.figma/image/mev8cq2f-ws4bzbg.png"
+                  src="../image/mev8cq2f-ws4bzbg.png"
                   className={styles.image655}
                 />
                 <div className={styles.ellipse177} />
@@ -40,11 +41,11 @@ function App() {
                   <div className={styles.instance}>
                     <div className={styles.sliceYs01} />
                     <img
-                      src="./.figma/image/mev8cq2f-9snu7gf.png"
+                      src="../image/mev8cq2f-9snu7gf.png"
                       className={styles.frame5}
                     />
                     <img
-                      src="./.figma/image/mev8cq2f-v9dq91n.png"
+                      src="../image/mev8cq2f-v9dq91n.png"
                       className={styles.frame6}
                     />
                   </div>
@@ -53,11 +54,11 @@ function App() {
                     <div className={styles.instance2}>
                       <div className={styles.sliceYs01} />
                       <img
-                        src="./.figma/image/mev8cq2f-gdu5gii.png"
+                        src="../image/mev8cq2f-gdu5gii.png"
                         className={styles.frame7}
                       />
                       <img
-                        src="./.figma/image/mev8cq2f-scyhxli.png"
+                        src="../image/mev8cq2f-scyhxli.png"
                         className={styles.frame8}
                       />
                     </div>
@@ -69,14 +70,14 @@ function App() {
           </div>
           <div className={styles.frame12}>
             <div className={styles.frame1312332494}>
-              <img src="./.figma/image/mev8cq2f-dmhb5up.png" className={styles.frame11} />
+              <img src="../image/mev8cq2f-dmhb5up.png" className={styles.frame11} />
               <div className={styles.frame1312332498}>
                 <p className={styles.text6}>1.2倍加成卡</p>
                 <p className={styles.text7}>获得5000积分可得</p>
               </div>
             </div>
             <div className={styles.frame1312332495}>
-              <img src="./.figma/image/mev8cq2f-dmhb5up.png" className={styles.frame11} />
+              <img src="../image/mev8cq2f-dmhb5up.png" className={styles.frame11} />
               <div className={styles.frame13123324982}>
                 <p className={styles.text6}>1.2倍加成卡</p>
                 <p className={styles.text7}>获得10000再得一张</p>
@@ -84,7 +85,7 @@ function App() {
             </div>
             <div className={styles.frame1312332496}>
               <img
-                src="./.figma/image/mev8cq2f-ltdioyd.png"
+                src="../image/mev8cq2f-ltdioyd.png"
                 className={styles.a16905382196511}
               />
               <div className={styles.frame13123324983}>
@@ -106,11 +107,11 @@ function App() {
                 <div className={styles.instance}>
                   <div className={styles.sliceYs01} />
                   <img
-                    src="./.figma/image/mev8cq2f-9snu7gf.png"
+                    src="../image/mev8cq2f-9snu7gf.png"
                     className={styles.frame5}
                   />
                   <img
-                    src="./.figma/image/mev8cq2f-v9dq91n.png"
+                    src="../image/mev8cq2f-v9dq91n.png"
                     className={styles.frame6}
                   />
                 </div>
@@ -119,11 +120,11 @@ function App() {
                   <div className={styles.instance2}>
                     <div className={styles.sliceYs01} />
                     <img
-                      src="./.figma/image/mev8cq2f-gdu5gii.png"
+                      src="../image/mev8cq2f-gdu5gii.png"
                       className={styles.frame7}
                     />
                     <img
-                      src="./.figma/image/mev8cq2f-scyhxli.png"
+                      src="../image/mev8cq2f-scyhxli.png"
                       className={styles.frame8}
                     />
                   </div>
@@ -141,12 +142,12 @@ function App() {
             </div>
             <div className={styles.instance5}>
               <p className={styles.text8}>查看榜单</p>
-              <img src="./.figma/image/mev8cq2f-d7c1pbp.svg" className={styles.frame14} />
+              <img src="../image/mev8cq2f-d7c1pbp.svg" className={styles.frame14} />
             </div>
           </div>
           <div className={styles.instance10}>
             <div className={styles.instance7}>
-              <img src="./.figma/image/mev8cq2f-qqch55q.png" className={styles.frame15} />
+              <img src="../image/mev8cq2f-qqch55q.png" className={styles.frame15} />
               <p className={styles.text10}>1.2倍加成卡</p>
             </div>
             <div className={styles.frame19}>
@@ -169,7 +170,7 @@ function App() {
           </div>
           <div className={styles.instance13}>
             <div className={styles.instance11}>
-              <img src="./.figma/image/mev8cq2f-qqch55q.png" className={styles.frame15} />
+              <img src="../image/mev8cq2f-qqch55q.png" className={styles.frame15} />
               <p className={styles.text10}>1.2倍加成卡</p>
             </div>
             <div className={styles.frame23}>
@@ -195,4 +196,4 @@ function App() {
   );
 }
 
-export default App;
+export default Component;
