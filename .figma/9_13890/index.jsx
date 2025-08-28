@@ -1,8 +1,8 @@
 import React from 'react';
-import './App.css';
-import styles from './App.module.scss';
 
-function App() {
+import styles from './index.module.scss';
+
+const Component = () => {
   return (
     <div className={styles.frame13}>
       <div className={styles.instance}>
@@ -17,7 +17,7 @@ function App() {
       <div className={styles.frame12}>
         <div className={styles.frame5}>
           <div className={styles.instance2}>
-            <img src="./.figma/image/mev0bw79-7fgx5t1.png" className={styles.frame3} alt="地区赛" />
+            <img src="../image/mev0bw79-7fgx5t1.png" className={styles.frame3} />
           </div>
           <div className={styles.frame4}>
             <p className={styles.text2}>地区赛</p>
@@ -26,7 +26,7 @@ function App() {
         </div>
         <div className={styles.frame7}>
           <div className={styles.instance3}>
-            <img src="./.figma/image/mev0bw79-r3rl4li.png" className={styles.frame6} alt="总决赛" />
+            <img src="../image/mev0bw79-r3rl4li.png" className={styles.frame6} />
           </div>
           <div className={styles.frame4}>
             <p className={styles.text2}>总决赛</p>
@@ -35,7 +35,7 @@ function App() {
         </div>
         <div className={styles.frame9}>
           <div className={styles.instance4}>
-            <img src="./.figma/image/mev0bw79-ld4m3sj.png" className={styles.frame8} alt="展示赛" />
+            <img src="../image/mev0bw79-ld4m3sj.png" className={styles.frame8} />
           </div>
           <div className={styles.frame4}>
             <p className={styles.text2}>展示赛</p>
@@ -44,7 +44,7 @@ function App() {
         </div>
         <div className={styles.frame11}>
           <div className={styles.instance5}>
-            <img src="./.figma/image/mev0bw79-bag6ra0.png" className={styles.frame10} alt="战队赛" />
+            <img src="../image/mev0bw79-bag6ra0.png" className={styles.frame10} />
           </div>
           <div className={styles.frame4}>
             <p className={styles.text2}>战队赛</p>
@@ -56,4 +56,4 @@ function App() {
   );
 }
 
-export default App;
+export default Component;
