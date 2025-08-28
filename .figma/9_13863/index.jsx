@@ -1,14 +1,14 @@
 import React from 'react';
-import styles from './Push.module.scss';
 
-function App() {
+import styles from './index.module.scss';
+
+const Component = () => {
   return (
     <div className={styles.push}>
       <div className={styles.aImage}>
         <img
-          src="/image/mev7t2cf-sy9zo3s.svg"
+          src="../image/mev7t2cf-sy9zo3s.svg"
           className={styles.frame2036092292}
-          alt="check icon"
         />
       </div>
       <div className={styles.frame2036094460}>
@@ -19,10 +19,10 @@ function App() {
         <div className={styles.ellipse3937}>
           <p className={styles.a1}>1</p>
         </div>
-        <img src="/image/mev7t2cg-h60uav8.png" className={styles.frame} alt="arrow icon" />
+        <img src="../image/mev7t2cg-h60uav8.png" className={styles.frame} />
       </div>
     </div>
   );
 }
 
-export default App;
+export default Component;

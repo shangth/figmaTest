@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+}
+
+.push {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 12px;
+  border: 2px solid #ffffffcc;
+  border-radius: 20px;
+  box-shadow: 0px 4px 6px 0px #0000001a;
+  background: #ffffff;
+  padding: 14px;
+  width: 390px;
+  max-width: calc(100vw - 40px);
+  height: 94px;
+  overflow: hidden;
+  backdrop-filter: blur(16px);
+  
+  @media (max-width: 430px) {
+    width: 100%;
+    max-width: none;
+    margin: 0 20px;
+  }
+
+  .aImage {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: inset 2px -1px 2px 0px #ffffff1c;
+    background: #07d169;
+    padding: 7px 7px 8px;
+    overflow: hidden;
+
+    .frame2036092292 {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  .frame2036094460 {
+    display: inline-flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    align-items: flex-start;
+    row-gap: 8px;
+
+    .text {
+      flex-shrink: 0;
+      align-self: stretch;
+      letter-spacing: 0;
+      color: #222222;
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .text2 {
+      flex-shrink: 0;
+      width: 230px;
+      letter-spacing: 0;
+      color: #717171;
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+      font-size: 14px;
+    }
+  }
+
+  .group2036094373 {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+    width: 42px;
+    min-width: 42px;
+    height: 24px;
+
+    .ellipse3937 {
+      display: flex;
+      align-items: center;
+      border-radius: 50%;
+      background: #ff2f2f;
+      padding: 5px 10px 4px 8px;
+
+      .a1 {
+        line-height: 14px;
+        letter-spacing: 0;
+        color: #ffffff;
+        font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+
+    .frame {
+      width: 16px;
+      height: 16px;
+      rotate: -180deg;
+    }
+  }
+}
