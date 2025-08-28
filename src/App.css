@@ -1,38 +1,581 @@
-/* 应用整体样式 */
-.App {
-  min-height: 100vh;
-  background: #f5f5f5;
+/* 重置和基础样式 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #f5f5f5;
   padding: 20px;
+}
+
+.App {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  min-height: 100vh;
 }
 
-.app-container {
+/* 订单卡片容器 */
+.order-card {
+  width: 398px;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 12px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  max-width: 500px;
-  width: 100%;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.app-container h1 {
-  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 24px;
+/* 店铺头部区域 */
+.shop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 374px;
+}
+
+.shop-info {
+  display: flex;
+  align-items: center;
+}
+
+.shop-main {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.shop-brand {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* 品牌徽章 */
+.brand-badge {
+  position: relative;
+  width: 30px;
+  height: 16px;
+  background: #352A35;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.brand-badge-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 16px;
+  background: #352A35;
+  border-radius: 3px;
+}
+
+.brand-gradient {
+  position: absolute;
+  top: -7px;
+  left: -9px;
+  width: 45px;
+  height: 27px;
+  background: linear-gradient(232deg, rgba(255, 255, 255, 1) 0%, rgba(217, 217, 217, 0) 64%);
+  opacity: 0.3;
+}
+
+.brand-logo {
+  position: absolute;
+  top: 2.6px;
+  left: 4px;
+  width: 21.8px;
+  height: 10.8px;
+  z-index: 1;
+}
+
+.brand-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 店铺名称 */
+.shop-name {
+  font-family: 'PingFang SC';
   font-weight: 500;
-  color: #333;
-  margin: 0;
+  font-size: 17px;
+  line-height: 1.18;
+  color: #000000;
+}
+
+/* 促销标签 */
+.promotion-tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 4px;
+  background: #07C160;
+  border: 0.5px solid #FE364D;
+  border-radius: 3px;
+}
+
+.promotion-tag span {
+  font-family: 'PingFang SC';
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1.09;
+  color: #FE364D;
+}
+
+/* 箭头图标 */
+.arrow-icon {
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 订单状态 */
+.order-status {
   text-align: center;
 }
 
+.order-status span {
+  font-family: 'PingFang SC';
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.2;
+  color: #FE3666;
+}
+
+/* 商品区域 */
+.product-section {
+  display: flex;
+  gap: 8px;
+  width: 374px;
+}
+
+.product-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.product-header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+}
+
+.product-brand-small {
+  width: 52px;
+  height: 16px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.product-brand-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-title {
+  flex: 1;
+  height: 21px;
+}
+
+.product-title span {
+  font-family: 'PingFang SC';
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #000000;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.product-specs {
+  height: 21px;
+}
+
+.product-specs span {
+  font-family: 'PingFang SC';
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #737373;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* 服务标签 */
+.service-tags {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.service-tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 4px;
+  border: 0.5px solid rgba(174, 126, 85, 0.5);
+  border-radius: 3px;
+}
+
+.service-tag.green {
+  background: rgba(7, 193, 96, 0.08);
+}
+
+.service-tag.orange {
+  background: #FDDCAB;
+}
+
+.service-tag span {
+  font-family: 'PingFang SC';
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1.09;
+  color: #AE7E55;
+}
+
+/* 价格区域 */
+.price-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  padding: 2px 0 0 0;
+}
+
+.price-main {
+  display: flex;
+  align-items: flex-end;
+  gap: 1px;
+}
+
+.currency {
+  width: 7px;
+  height: 10px;
+  font-family: 'SF Pro';
+  font-weight: 510;
+  font-size: 11px;
+  line-height: 1;
+  color: #000000;
+  margin-top: -1px;
+}
+
+.price-parts {
+  display: flex;
+  align-items: flex-end;
+  gap: -1px;
+}
+
+.price-major {
+  font-family: 'SF Pro';
+  font-weight: 510;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: #000000;
+}
+
+.price-dot {
+  font-family: 'SF Pro';
+  font-weight: 510;
+  font-size: 11px;
+  line-height: 1;
+  color: #000000;
+}
+
+.price-minor {
+  font-family: 'SF Pro';
+  font-weight: 510;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: -0.005em;
+  color: #000000;
+}
+
+.quantity {
+  width: 13px;
+  height: 20px;
+}
+
+.quantity span {
+  font-family: 'PingFang SC';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #737373;
+}
+
+/* 发货信息 */
+.shipping-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+  padding: 8px 0;
+  height: 41px;
+  background: #F8F8F8;
+  border-radius: 6px;
+}
+
+.shipping-notice {
+  display: flex;
+  align-items: center;
+  height: 25px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 0;
+}
+
+.shipping-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 166px;
+  height: 19px;
+}
+
+.shipping-indicator {
+  width: 8px;
+  height: 18px;
+  background: #D9D9D9;
+  border-radius: 1px;
+}
+
+.shipping-text span {
+  font-family: 'PingFang SC';
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.27;
+  color: #9C9C9C;
+}
+
+/* 实付款信息 */
+.payment-info {
+  width: 195px;
+  height: 20px;
+  position: relative;
+}
+
+.payment-details {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.insurance-text {
+  font-family: 'PingFang SC';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  color: #737373;
+  margin-top: 2px;
+}
+
+.payment-label {
+  font-family: 'PingFang SC';
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.2;
+  color: #000000;
+  margin-top: 2px;
+  margin-left: 8px;
+}
+
+.final-price {
+  display: flex;
+  align-items: flex-end;
+  gap: 1px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.final-currency {
+  width: 9px;
+  height: 16px;
+  font-family: 'SF Pro';
+  font-weight: 510;
+  font-size: 14px;
+  line-height: 1.19;
+  letter-spacing: -0.01em;
+  color: #222222;
+  stroke: #FFFFFF;
+  stroke-width: 0.2px;
+  margin-top: 0.13px;
+}
+
+.final-amount {
+  display: flex;
+  align-items: flex-end;
+  gap: 1px;
+}
+
+.final-major {
+  font-family: 'SF Pro';
+  font-weight: 510;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: #000000;
+}
+
+.final-dot {
+  width: 5px;
+  height: 15px;
+  font-family: 'SF Pro';
+  font-weight: 510;
+  font-size: 14px;
+  line-height: 1;
+  text-align: center;
+  color: #000000;
+}
+
+.final-minor {
+  width: 18px;
+  height: 15px;
+  font-family: 'SF Pro';
+  font-weight: 510;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: #000000;
+}
+
+/* 操作按钮 */
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+
+.action-btn {
+  width: 94px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  background: #FFFFFF;
+  border: 0.5px solid #D9D9D9;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+  background: #f8f8f8;
+  border-color: #bfbfbf;
+}
+
+.action-btn:active {
+  background: #f0f0f0;
+}
+
+.action-btn span {
+  font-family: 'PingFang SC';
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.4;
+  text-align: center;
+  color: #000000;
+}
+
 /* 响应式设计 */
-@media (max-width: 768px) {
-  .App {
+@media (max-width: 480px) {
+  body {
     padding: 10px;
   }
   
-  .app-container h1 {
-    font-size: 20px;
+  .order-card {
+    width: 100%;
+    max-width: 398px;
+  }
+  
+  .shop-header,
+  .product-section {
+    width: 100%;
+  }
+  
+  .shop-header {
+    gap: 20px;
+  }
+  
+  .product-title span {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+  
+  .action-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .action-btn {
+    flex: 1;
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 360px) {
+  .shop-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .order-status {
+    align-self: flex-end;
+  }
+  
+  .product-section {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .price-section {
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
