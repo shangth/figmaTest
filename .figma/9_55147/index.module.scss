@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+.fieldCount {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px 20px;
+  width: 480px;
+  height: 308px;
+
+  .title {
+    flex-shrink: 0;
+    line-height: 22px;
+    letter-spacing: 0;
+    color: var(--color-text-2, #4e5969);
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+  }
+
+  .a {
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+  }
+
+  .formItem {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    align-items: center;
+    align-self: stretch;
+    padding-bottom: 20px;
+
+    .labelItem {
+      display: flex;
+      align-items: center;
+      column-gap: 4px;
+      margin-top: -1px;
+      padding-bottom: 8px;
+      width: 440px;
+      overflow: hidden;
+    }
+
+    .input {
+      display: flex;
+      align-items: center;
+      align-self: stretch;
+      margin-top: 1px;
+      border-radius: 2px;
+      overflow: hidden;
+
+      .content {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        column-gap: 12px;
+        border-radius: 2px;
+        background: var(--color-fill-2, #f2f3f5);
+        padding-left: 12px;
+        width: 440px;
+        height: 32px;
+        overflow: hidden;
+
+        .placeholder {
+          flex-shrink: 0;
+          line-height: 22px;
+          letter-spacing: 0;
+          color: var(--color-text-3, #86909c);
+          font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .formItem2 {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    align-items: center;
+    align-self: stretch;
+    padding-bottom: 20px;
+
+    .labelItem2 {
+      display: flex;
+      align-items: center;
+      column-gap: 4px;
+      margin-top: -1px;
+      padding-bottom: 8px;
+      width: 440px;
+      overflow: hidden;
+
+      .tipsQuestionCircle {
+        flex-shrink: 0;
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+    .textarea {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      align-self: stretch;
+      margin-top: 1px;
+      border-radius: 2px;
+      background: var(--color-fill-2, #f2f3f5);
+      padding: 4px 12px;
+      height: 128px;
+      overflow: hidden;
+
+      .placeholder2 {
+        flex-grow: 1;
+        align-self: stretch;
+        width: 416px;
+        line-height: 22px;
+        letter-spacing: 0;
+        color: var(--color-text-3, #86909c);
+        font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+        font-size: 14px;
+      }
+
+      .resizer {
+        flex-shrink: 0;
+        align-self: stretch;
+        width: 416px;
+        height: 1px;
+      }
+    }
+  }
+}
