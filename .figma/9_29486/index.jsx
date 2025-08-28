@@ -1,27 +1,28 @@
 import React from 'react';
-import styles from './App.module.scss';
 
-function App() {
+import styles from './index.module.scss';
+
+const Component = () => {
   return (
     <div className={styles.frame9}>
       <div className={styles.frame3}>
         <div className={styles.frame2036091294}>
           <div className={styles.frame2036091293}>
-            <div className={styles.frame} style={{backgroundColor: '#000'}} />
+            <img src="../image/meuv17n2-hsqxcb2.svg" className={styles.frame} />
             <p className={styles.text}>百媚服饰批发专营店</p>
             <div className={styles.frame1312332804}>
               <p className={styles.text2}>满40减5</p>
             </div>
           </div>
-          <div className={styles.frame2} style={{backgroundColor: '#ccc'}} />
+          <img src="../image/meuv17n2-c8xmsp3.svg" className={styles.frame2} />
         </div>
         <p className={styles.text3}>待发货</p>
       </div>
       <div className={styles.frame1312333427}>
-        <div className={styles.frame4} style={{backgroundColor: '#f0f0f0'}} />
+        <img src="../image/meuv17n2-n5zvrx7.png" className={styles.frame4} />
         <div className={styles.frame2036083719}>
           <div className={styles.frame1312332842}>
-            <div className={styles.image643} style={{backgroundColor: '#e0e0e0'}} />
+            <img src="../image/meuv17n2-f729rie.png" className={styles.image643} />
             <p className={styles.text4}>
               秋冬卫衣保暖时尚纯棉美式加绒加大码圆领运动休闲情侣内搭外穿
             </p>
@@ -87,4 +88,4 @@ function App() {
   );
 }
 
-export default App;
+export default Component;
