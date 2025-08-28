@@ -1,0 +1,386 @@
+* {
+  box-sizing: border-box;
+}
+
+.frame7 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 340px;
+  height: 183px;
+
+  .text2 {
+    flex-shrink: 0;
+    opacity: 0.6;
+    line-height: 18px;
+    letter-spacing: 0;
+    color: #ffdfbf;
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+  }
+
+  .frame3 {
+    display: flex;
+    flex-shrink: 0;
+    align-items: flex-start;
+    border-radius: 8px 8px 0px 0px;
+    background: #1c1c33;
+    width: 340px;
+    height: 139px;
+    overflow: hidden;
+
+    .frame1312333370 {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      flex-grow: 1;
+      align-items: flex-start;
+      margin-right: -18px;
+      padding: 16px 27px 89px 9px;
+      overflow: hidden;
+
+      .ellipse1715 {
+        position: absolute;
+        top: -139px;
+        left: 98px;
+        opacity: 0.4;
+        border-radius: 50%;
+        background: #313150;
+        width: 522px;
+        height: 278px;
+        filter: blur(60px);
+      }
+
+      .autoWrapper {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: stretch;
+        padding-right: 0;
+        padding-left: 0;
+
+        .frame2036084546 {
+          display: inline-flex;
+          flex-direction: column;
+          align-items: flex-start;
+          align-self: stretch;
+          margin-right: 79px;
+          row-gap: 5px;
+
+          .text {
+            flex-shrink: 0;
+            line-height: 24px;
+            letter-spacing: 0;
+            color: var(--main-color, #ffdfbf);
+            font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+          }
+        }
+
+        .frame2036084617 {
+          display: flex;
+          align-items: flex-start;
+          align-self: stretch;
+          margin-top: 10px;
+          height: 50px;
+
+          .text3 {
+            flex-shrink: 0;
+            line-height: 24px;
+            letter-spacing: 0;
+            color: #ffffff;
+            font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+          }
+
+          .frame2036087387 {
+            display: inline-flex;
+            flex-shrink: 0;
+            align-items: flex-start;
+            align-self: stretch;
+            justify-content: center;
+
+            .text4 {
+              flex-shrink: 0;
+              opacity: 0.6;
+              line-height: 18px;
+              letter-spacing: 0;
+              color: #ffffff;
+              font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+              font-size: 12px;
+            }
+
+            .frame {
+              position: relative;
+              flex-shrink: 0;
+              opacity: 0.6;
+              width: 14px;
+              height: 18px;
+
+              .vectorStroke {
+                position: absolute;
+                top: 5px;
+                left: 3px;
+                background: #ffffff;
+                width: 8px;
+                height: 8px;
+              }
+
+              .vectorStroke2 {
+                position: absolute;
+                top: 5px;
+                left: 3px;
+                background: #ffffff;
+                width: 8px;
+                height: 8px;
+                rotate: -180deg;
+              }
+            }
+
+            .a119 {
+              flex-shrink: 0;
+              opacity: 0.6;
+              line-height: 18px;
+              letter-spacing: 0;
+              color: #ffffff;
+              font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+              font-size: 12px;
+              font-weight: 500;
+            }
+          }
+
+          .frame2036084557 {
+            display: flex;
+            align-items: center;
+            border-radius: 10px 10px 0px;
+            width: 135px;
+
+            .rectangle111142613 {
+              display: flex;
+              flex-grow: 1;
+              align-items: center;
+              margin-right: -4px;
+              padding: 4px 36px 4px 32px;
+              background-image: url(../image/mev0klm6-ic1qkgy.svg);
+              background-position: center;
+              background-size: cover;
+              background-repeat: no-repeat;
+
+              .frame2036084556 {
+                display: inline-flex;
+                flex-direction: column;
+                flex-grow: 1;
+                align-items: center;
+              }
+            }
+          }
+
+          .instance {
+            display: flex;
+            align-items: center;
+            margin-top: 1px;
+            margin-left: 12px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            overflow: hidden;
+
+            .frame2 {
+              width: 28px;
+              height: 21px;
+            }
+          }
+
+          .frame2036084558 {
+            position: relative;
+            margin-left: 12px;
+            border-radius: 10px 10px 0px;
+            width: 135px;
+            height: 50px;
+
+            .rectangle1111426132 {
+              position: absolute;
+              top: 0;
+              right: 0;
+              width: 139px;
+              height: 50px;
+              rotate: -180deg;
+            }
+
+            .frame20360845562 {
+              display: inline-flex;
+              position: absolute;
+              top: 4px;
+              left: 30px;
+              flex-direction: column;
+              align-items: center;
+              width: 75px;
+              height: 42px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .frame6 {
+    display: flex;
+    flex-shrink: 0;
+    align-items: flex-start;
+    border-radius: 0px 0px 8px 8px;
+    background-color: #1c1c33;
+    width: 340px;
+    height: 44px;
+    overflow: hidden;
+    background-image: linear-gradient(#ffffff1a, #ffffff1a);
+
+    .frame13123333702 {
+      position: relative;
+      width: 358px;
+      height: 212px;
+      overflow: hidden;
+
+      .ellipse17152 {
+        position: absolute;
+        top: -139px;
+        left: 97px;
+        opacity: 0.4;
+        border-radius: 50%;
+        background: #313150;
+        width: 522px;
+        height: 278px;
+        filter: blur(60px);
+      }
+
+      .frame2036084548 {
+        display: flex;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        align-items: flex-start;
+        padding-right: 6px;
+        padding-left: 6px;
+        width: 340px;
+        height: 24px;
+
+        .frame1312333359 {
+          display: flex;
+          align-items: center;
+          padding-left: 2px;
+          width: 328px;
+
+          .text6 {
+            flex-shrink: 0;
+            line-height: 18px;
+            letter-spacing: 0;
+            color: #ffdfbf;
+            font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+          }
+
+          .frame1312333357 {
+            display: flex;
+            flex-grow: 1;
+            align-items: center;
+            column-gap: 12px;
+
+            .text5 {
+              flex-shrink: 0;
+              background: linear-gradient(114deg, #ffe8c3 11.4%, #fac08c 91.2%);
+              background-clip: text;
+              line-height: 28px;
+              letter-spacing: 0;
+              color: transparent;
+              font-family: "Alibaba PuHuiTi 2.0", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+              font-size: 14px;
+              -webkit-background-clip: text;
+            }
+
+            .frame2036084610 {
+              display: inline-flex;
+              flex-shrink: 0;
+              align-items: center;
+              column-gap: 4px;
+
+              .frame4 {
+                display: flex;
+                flex-shrink: 0;
+                align-items: center;
+                background-image: url(../image/mev0klm6-3lz8dp5.svg);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+
+                .avatar88 {
+                  border: 1px solid var(--stroke-main-color, #ffd7b2);
+                  border-radius: 50%;
+                  width: 26px;
+                  height: 26px;
+                  background-image: url(../image/mev0klm6-6cqlgpu.png);
+                  background-position: center;
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                }
+              }
+
+              .frame2036084554 {
+                display: inline-flex;
+                flex-shrink: 0;
+                align-items: center;
+              }
+            }
+          }
+
+          .frame1312333355 {
+            display: inline-flex;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: flex-end;
+            column-gap: 16px;
+
+            .frame2036084581 {
+              display: inline-flex;
+              flex-shrink: 0;
+              align-items: center;
+              column-gap: 3px;
+
+              .vector {
+                flex-shrink: 0;
+                width: 9px;
+                height: 9px;
+              }
+
+              .a426 {
+                flex-shrink: 0;
+                opacity: 0.6;
+                line-height: 15px;
+                letter-spacing: 0;
+                color: #ffdfbf;
+                font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                font-size: 12px;
+              }
+            }
+
+            .frame2036084609 {
+              display: inline-flex;
+              flex-shrink: 0;
+              align-items: center;
+              justify-content: flex-end;
+              column-gap: 2px;
+
+              .frame5 {
+                flex-shrink: 0;
+                width: 10px;
+                height: 10px;
+                overflow: hidden;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
